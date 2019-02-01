@@ -1,0 +1,15 @@
+swiftmailer:
+    spool: { type: 'memory' }
+    transport:        gmail
+    username:         ineedhelp.wf3@gmail.com
+    password:         Webforce3
+    host:             gmail.com
+    port:             465
+    encryption:       ssl
+    auth-mode:        login
+    stream_options:
+        ssl:
+            allow_self_signed: true
+            verify_peer: false
+            verify_peer_name: false
+

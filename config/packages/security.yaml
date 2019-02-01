@@ -1,0 +1,48 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        in_memory: { memory: ~ }
+        user_provider:
+            entity:
+                class:    App\Entity\User
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            pattern: .*
+            anonymous: true
+            provider: user_provider
+            form_login:
+                check_path: login
+                login_path: login
+                success_handler: redirect.after.login     
+                # default_target_path: /education 
+            logout:
+                path:   /logout
+                target: login
+
+    encoders:
+        App\Entity\User: bcrypt
+    
+    role_hierarchy:
+        ROLE_SCHOOL_USER_ADMIN: ROLE_SCHOOL_USER
+        ROLE_SCHOOL_USER: ROLE_GRADUATE_USER
+        
+
+            # activate different ways to authenticate
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: true
+            # https://symfony.com/doc/current/security/form_login_setup.html
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/education/admin, roles: ROLE_SCHOOL_USER_ADMIN }
+        # - { path: ^/profile, roles: ROLE_SCHOOL_USER }
+        - { path: ^/profile, roles: ROLE_GRADUATE_USER }

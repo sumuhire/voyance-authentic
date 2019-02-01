@@ -1,0 +1,7 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+       issuance_excel:
+           uri_prefix: /uploads/issuances/excels
+           upload_destination: '%kernel.project_dir%/public/uploads/issuances/excels'
