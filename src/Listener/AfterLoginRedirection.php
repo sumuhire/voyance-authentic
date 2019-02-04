@@ -46,25 +46,26 @@ class AfterLoginRedirection implements AuthenticationSuccessHandlerInterface
         /**
          * 
          */
-        if (in_array('ROLE_SCHOOL_USER', $rolesTab, true)) {
+        if (in_array('ROLE_GIALLO', $rolesTab, true)) {
             
             // c'est un aministrateur : on le rediriger vers l'espace admin
-            $redirection = new RedirectResponse($this->router->generate('education'));
-       
-        } elseif (in_array('ROLE_SCHOOL_USER_ADMIN', $rolesTab, true)) {
-            
-            // c'est un utilisaeur lambda : on le rediriger vers l'accueil
-            $redirection = new RedirectResponse($this->router->generate('education'));
-        
-        } elseif (in_array('ROLE_GRADUATE_USER', $rolesTab, true)) {
-            
-            // c'est un utilisaeur lambda : on le rediriger vers l'accueil
-            $redirection = new RedirectResponse($this->router->generate('profile'));
-        
-        }else{
-            // c'est un utilisaeur lambda : on le rediriger vers l'accueil
-            $redirection = new RedirectResponse($this->router->generate('login'));
+            $redirection = new RedirectResponse($this->router->generate('dashboard'));
         }
+       
+        // } elseif (in_array('ROLE_SCHOOL_USER_ADMIN', $rolesTab, true)) {
+            
+        //     // c'est un utilisaeur lambda : on le rediriger vers l'accueil
+        //     $redirection = new RedirectResponse($this->router->generate('education'));
+        
+        // } elseif (in_array('ROLE_GRADUATE_USER', $rolesTab, true)) {
+            
+        //     // c'est un utilisaeur lambda : on le rediriger vers l'accueil
+        //     $redirection = new RedirectResponse($this->router->generate('profile'));
+        
+        // }else{
+        //     // c'est un utilisaeur lambda : on le rediriger vers l'accueil
+        //     $redirection = new RedirectResponse($this->router->generate('login'));
+        // }
 
         return $redirection;
     }

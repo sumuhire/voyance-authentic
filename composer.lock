@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3438103d7689c1c26ef4ff9a15eb3b1f",
+    "content-hash": "fb81dce5638308b7aa9f53938d8dbc94",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -985,12 +985,12 @@
             "version": "v2.6.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/doctrine2.git",
+                "url": "https://github.com/doctrine/orm.git",
                 "reference": "434820973cadf2da2d66e7184be370084cc32ca8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/434820973cadf2da2d66e7184be370084cc32ca8",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/434820973cadf2da2d66e7184be370084cc32ca8",
                 "reference": "434820973cadf2da2d66e7184be370084cc32ca8",
                 "shasum": ""
             },
@@ -3715,21 +3715,21 @@
         },
         {
             "name": "symfony/orm-pack",
-            "version": "v1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/orm-pack.git",
-                "reference": "1b58f752cd917a08c9c8df020781d9c46a2275b1"
+                "reference": "36c2a928482dc5f05c5c1c1b947242ae03ff1335"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/orm-pack/zipball/1b58f752cd917a08c9c8df020781d9c46a2275b1",
-                "reference": "1b58f752cd917a08c9c8df020781d9c46a2275b1",
+                "url": "https://api.github.com/repos/symfony/orm-pack/zipball/36c2a928482dc5f05c5c1c1b947242ae03ff1335",
+                "reference": "36c2a928482dc5f05c5c1c1b947242ae03ff1335",
                 "shasum": ""
             },
             "require": {
                 "doctrine/doctrine-bundle": "^1.6.10",
-                "doctrine/doctrine-migrations-bundle": "^1.3",
+                "doctrine/doctrine-migrations-bundle": "^1.3|^2.0",
                 "doctrine/orm": "^2.5.11",
                 "php": "^7.0"
             },
@@ -3739,7 +3739,7 @@
                 "MIT"
             ],
             "description": "A pack for the Doctrine ORM",
-            "time": "2017-12-12T01:47:50+00:00"
+            "time": "2019-01-16T09:49:15+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -3786,7 +3786,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -5954,16 +5954,16 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.9.0",
+            "version": "v1.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "e873047b6022a0343c9354f65d5d47b9e351dd53"
+                "reference": "08fabae78050d2fe71341d0edc3872bddf03482f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/e873047b6022a0343c9354f65d5d47b9e351dd53",
-                "reference": "e873047b6022a0343c9354f65d5d47b9e351dd53",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/08fabae78050d2fe71341d0edc3872bddf03482f",
+                "reference": "08fabae78050d2fe71341d0edc3872bddf03482f",
                 "shasum": ""
             },
             "require": {
@@ -6016,7 +6016,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2018-11-03T18:25:11+00:00"
+            "time": "2019-01-17T02:02:27+00:00"
         },
         {
             "name": "symfony/panther",

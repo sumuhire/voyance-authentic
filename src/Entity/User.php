@@ -55,7 +55,7 @@ class User implements UserInterface
     protected $lastname;
 
     /**
-     * @ORM\Column(type="string", length=25, unique=true)
+     * @ORM\Column(type="string", length=100, unique=true)
      * @Assert\NotBlank()
      * @Assert\Regex("/^\w+/")
      * @Groups({"public"})
@@ -112,21 +112,6 @@ class User implements UserInterface
      * )
      */
     protected $roles;
-
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\SchoolUser", inversedBy="user", cascade={"persist", "remove"})
-     */
-    private $schoolUser;
-
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\GraduateUser", inversedBy="user", cascade={"persist", "remove"})
-     */
-    private $graduateUser;
-
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\CorporateUser", inversedBy="user", cascade={"persist", "remove"})
-     */
-    private $corporateUser;
 
     public function __construct()
     {
@@ -315,64 +300,5 @@ class User implements UserInterface
         }
         return $this;
     }
-
-
-    // public function isEqualTo(UserInterface $user)
-    // {
-    //     if (!$user instanceof WebserviceUser) {
-    //         return false;
-    //     }
-
-    //     if ($this->password !== $user->getPassword()) {
-    //         return false;
-    //     }
-
-    //     if ($this->salt !== $user->getSalt()) {
-    //         return false;
-    //     }
-
-    //     if ($this->username !== $user->getUsername()) {
-    //         return false;
-    //     }
-
-    //     return true;
-    // }
-
-    public function getSchoolUser(): ?SchoolUser
-    {
-        return $this->schoolUser;
-    }
-
-    public function setSchoolUser(?SchoolUser $schoolUser): self
-    {
-        $this->schoolUser = $schoolUser;
-
-        return $this;
-    }
-
-    public function getGraduateUser(): ?GraduateUser
-    {
-        return $this->graduateUser;
-    }
-
-    public function setGraduateUser(?GraduateUser $graduateUser): self
-    {
-        $this->graduateUser = $graduateUser;
-
-        return $this;
-    }
-
-    public function getCorporateUser(): ?CorporateUser
-    {
-        return $this->corporateUser;
-    }
-
-    public function setCorporateUser(?CorporateUser $corporateUser): self
-    {
-        $this->corporateUser = $corporateUser;
-
-        return $this;
-    }
-    
 
 }

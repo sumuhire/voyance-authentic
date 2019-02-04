@@ -27,9 +27,9 @@ security:
     encoders:
         App\Entity\User: bcrypt
     
-    role_hierarchy:
-        ROLE_SCHOOL_USER_ADMIN: ROLE_SCHOOL_USER
-        ROLE_SCHOOL_USER: ROLE_GRADUATE_USER
+    # role_hierarchy:
+    #     ROLE_SCHOOL_USER_ADMIN: ROLE_SCHOOL_USER
+      
         
 
             # activate different ways to authenticate
@@ -43,6 +43,5 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/education/admin, roles: ROLE_SCHOOL_USER_ADMIN }
-        # - { path: ^/profile, roles: ROLE_SCHOOL_USER }
-        - { path: ^/profile, roles: ROLE_GRADUATE_USER }
+        - { path: ^/dashboard, roles: ROLE_GIALLO }
+      

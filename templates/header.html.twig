@@ -2,15 +2,9 @@
     <div class="layout layout-nav-top" style="background-color: #353A40;">
 
     <div class="navbar navbar-expand-lg sticky-top" >
-        {% if is_granted('ROLE_SCHOOL_USER_ADMIN') %}
-        <a class="navbar-brand" href="{{ path("education") }}">
-            <img alt="nimble" src="/assets/img/brandmark-design-light.png" style="height:18px;width:91px;margin-left:11px"/>
-        </a> 
-        {% else %}
         <a class="navbar-brand" href="{{ path("index") }}">
-            <img alt="nimble" src="/assets/img/brandmark-design-light.png" style="height:18px;width:91px;margin-left:11px"/>
+            <img alt="nimble" src="/assets/img/Giallo-grey.png" style="height:18px;width:91px;margin-left:11px"/>
         </a>
-        {% endif %}
         <div class="d-flex align-items-center">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -18,21 +12,11 @@
             <div class="d-block d-lg-none ml-2">
                 <div class="dropdown">
                     <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img alt="Image" src="{{ asset('uploads/picture/' ~ app.user.picture) }}" class="avatar" />
+                        <img alt="Image" src="/assets/img/avatar-male-2.jpg" class="avatar" />
                     </a>
-                    {% if is_granted('ROLE_SCHOOL_USER_ADMIN') %}
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a href="{{ path('schoolPage', { school: user.getSchoolUser().getSchool().getId() }) }}" class="dropdown-item">Page</a>
-                        <a href="{{ path("account_settings") }}" class="dropdown-item">Account Settings</a>
                         <a href="{{ path('logout') }}" class="dropdown-item">Log Out</a>
                     </div>
-                    {% else %}
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a href="{{ path("profile") }}" class="dropdown-item">Profile</a>
-                        <a href="{{ path("account_settings") }}" class="dropdown-item">Account Settings</a>
-                        <a href="{{ path('logout') }}" class="dropdown-item">Log Out</a>
-                    </div>
-                    {% endif %}
                 </div>
             </div>
         </div>
@@ -49,21 +33,11 @@
                 <div class="d-none d-lg-block">
                     <div class="dropdown">
                         <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img alt="Image" src="{{ asset('uploads/picture/' ~ app.user.picture) }}" class="avatar" />
-                        </a>
-                        {% if is_granted('ROLE_SCHOOL_USER_ADMIN') %}
+                            <img alt="Image" src="/assets/img/avatar-male-2.jpg" class="avatar" />
+                        </a>       
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a href="{{ path('schoolPage', { school: user.getSchoolUser().getSchool().getId() }) }}" class="dropdown-item">Page</a>
-                            <a href="{{ path("account_settings") }}" class="dropdown-item">Account Settings</a>
                             <a href="{{ path('logout') }}" class="dropdown-item">Log Out</a>
                         </div>
-                        {% else %}
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a href="{{ path("profile") }}" class="dropdown-item">Profile</a>
-                            <a href="{{ path("account_settings") }}" class="dropdown-item">Account Settings</a>
-                            <a href="{{ path('logout') }}" class="dropdown-item">Log Out</a>
-                        </div>
-                        {% endif %}
                     </div>
                 </div>
             </div>

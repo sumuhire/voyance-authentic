@@ -1,21 +1,6 @@
 
 
 # DefaultController Routes
-educationSignup:
-  path: /education/signup/{invite}
-  controller: App\Controller\DefaultController::signup
-
-graduateUserSignup:
-  path: /signup/{graduateUserInvite}
-  controller: App\Controller\IssuanceController::graduateUserSignup
-
-registrationRefusal:
-  path: /refusal/{graduateUserInvite}
-  controller: App\Controller\IssuanceController::registrationRefusal
-
-# deleteInvite:
-#   path: /education/class/{graduateUserInvite}
-#   controller: App\Controller\IssuanceController::deleteInvite  
 
 login:
   path: /login
@@ -25,106 +10,11 @@ index:
   path:     /
   controller: App\Controller\DefaultController::index
 
-about:
-  path:     /about
-  controller: App\Controller\DefaultController::about
-
-faq:
-  path:     /faq
-  controller: App\Controller\DefaultController::faq
-
-education:
-  path:     /education
-  controller: App\Controller\DefaultController::education
-
-error:
-  path:     /error
-  controller: App\Controller\DefaultController::error
-
-errorInvite:
-  path:     /errorInvitation
-  controller: App\Controller\DefaultController::errorInvite
+dashboard:
+  path:     /dashboard
+  controller: App\Controller\DefaultController::dashboard
 
 logout:
   path: /logout
 
-# Profile Routes
-schoolPage:
-  path: /education/page/{school}
-  controller: App\Controller\AdminController::schoolPage
 
-school:
-  path: /school/{school}
-  controller: App\Controller\DefaultController::school
-
-profile:
-  path: /page/
-  controller: App\Controller\AccountController::displayAccount
-
-visitProfile:
-  path: /{id}
-  controller: App\Controller\AccountController::visitAccount
-
-account_settings:
-  path: /profile/settings
-  controller: App\Controller\AccountController::editAccount
-
-passwordChange:
-  path: /profile/settings/password
-  controller: App\Controller\AccountController::changePassword
-
-pictureChange:
-  path: /profile/settings/pic
-  controller: App\Controller\AccountController::changePicture  
-  
-
-deleteAccount:
-  path: /profile/settings/delete
-  controller: App\Controller\AccountController::deleteAccount
-
-# AdminController Routes
-
-admin:
-  path: /education/admin/{school}
-  controller: App\Controller\AdminController::admin
-
-
-invite:
-  path: /admin/invite
-  controller: App\Controller\AdminController::userInvite
-
-inviteList:
-  path: /admin/inviteList
-  controller: App\Controller\AdminController::listInvites  
-
-studies:
-  path: /admin/studies/{faculty}
-  controller: App\Controller\StudiesController::studies
-
-issuances:
-  path: /education/class/{issuance}
-  controller: App\Controller\IssuanceController::class
-
-degreeType:
-  path: /admin/studies/faculty/settings/{degreeField}
-  controller: App\Controller\StudiesController::degreeType
-
-deleteFaculty:
-  path: /admin/delete/{faculty}
-  controller: App\Controller\AdminController::deleteFaculty
-
-userDetail:
-  path: /admin/userDetail/{user}
-  controller: App\Controller\AdminController::userDetail
-
-makeAdmin:
-  path: /admin/userList/makeAdmin{user}
-  controller: App\Controller\AdminController::makeAdmin
-     
-makeUser:
-  path: /admin/userList/makeUser/{user}
-  controller: App\Controller\AdminController::makeUser 
-
-makeInactive:
-  path: /admin/userList/deactivate/{user}
-  controller: App\Controller\AdminController::makeInactive  

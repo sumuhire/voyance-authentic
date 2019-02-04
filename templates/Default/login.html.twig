@@ -10,7 +10,7 @@
         <div class="container">
     
           <!-- Navbar: Brand -->
-          <a class="navbar-brand d-lg-none" href="index.html" >Giallo</a>
+          <a class="navbar-brand d-lg-none" href="{{path('index')}}" >Giallo</a>
     
           <!-- Navbar: Toggler -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,11 +70,11 @@
       <div class="container">
         <div class="row justify-content-center" >
          
-          <div class="col-md-8 col-lg-6" style='margin-top:-25%;'>
+          <div class="col-md-8 col-lg-6" style='margin-top:-25%;opacity:0.95;'>
            
 
             <!-- Form -->
-            <form class="form-styled bg-white" action="{{ path('login') }}" method='post' style='border-radius:0.5rem'>
+            <form class="form-styled bg-white" action="{{ path('login') }}" method='post' >
 
               {# Heading #}
             <h1 class="text-center mb-4" data-toggle="animation" data-animation="fadeUp" data-animation-order="1" data-animation-trigger="load" style='letter-spacing: 0.1em;color:#debc85'>
@@ -82,7 +82,7 @@
             </h1>
 
               <!-- Heading -->
-              <h4 class="text-center mb-4" style='letter-spacing: 0.1em;margin-top:50px'>
+              <h4 class="text-center mb-4" style='letter-spacing: 0.1em;'>
                 Login
               </h4>
 
