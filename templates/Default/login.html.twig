@@ -8,30 +8,65 @@
     ================================================== -->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top">
         <div class="container">
-    
-          <!-- Navbar: Brand -->
-          <a class="navbar-brand d-lg-none" href="{{path('index')}}" >Giallo</a>
-    
-          <!-- Navbar: Toggler -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <!-- Navbar: Collapse -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"></ul>
-          
+
             <!-- Navbar: Brand -->
-            <a class="navbar-brand d-none d-lg-flex justify-content-center" href="{{path('index')}}" >
-              Giallo Caffè
+            <a class="navbar-brand d-lg-none" href="index.html">
+                <img src="assets/img/giallo_caffé.png" class="img-fluid" alt="..." >
             </a>
-            <ul class="navbar-nav mr-auto"></ul>
-          
-    
-          </div> <!-- / .navbar-collapse -->
-    
-        </div> <!-- / .container -->
-      </nav> <!-- / .navbar -->
+      
+            <!-- Navbar: Toggler -->
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            
+            <!-- Navbar: Collapse -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+              <!-- Navbar navigation: Left -->
+              <ul class="navbar-nav mr-auto">
+                <!--  <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">About Us</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <!-- <a class="nav-link" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Menu
+                    </a>
+                   <a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Menu
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="nav-item__menu">
+                    <a class="dropdown-item" href="menu.html">Menu: Standard</a>
+                    <a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
+                  </div> 
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reservation.html">Reservation</a>
+                </li>-->
+              </ul>
+      
+              <!-- Navbar: Brand -->
+              <a class="navbar-brand d-none d-lg-flex" href="index.html">
+                  <img src="assets/img/giallo_caffé.png"  alt="..." >
+              </a>
+      
+              <!-- Navbar navigation: Right -->
+              <ul class="navbar-nav ml-auto">
+                <!--<li class="nav-item">
+                  <a class="nav-link" href="news-and-events.html">News & Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+                </li> 
+                <li class="nav-item">
+                  <a class="nav-link" href="contact-us.html">Contact</a>
+                </li>-->
+              </ul>
+      
+            </div> <!-- / .navbar-collapse -->
+      
+          </div> <!-- / .container -->
+        </nav> <!-- / .navbar -->
+      
     {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -77,7 +112,7 @@
             <form class="form-styled bg-white" action="{{ path('login') }}" method='post' >
 
               {# Heading #}
-            <h1 class="text-center mb-4" data-toggle="animation" data-animation="fadeUp" data-animation-order="1" data-animation-trigger="load" style='letter-spacing: 0.1em;color:#debc85'>
+            <h1 class="text-center mb-4" data-toggle="animation" data-animation="fadeUp" data-animation-order="1" data-animation-trigger="load" style='letter-spacing: 0.1em;color:#E2DCCB'>
               Welcome back
             </h1>
 

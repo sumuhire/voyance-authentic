@@ -5,7 +5,6 @@
         <div class="col-xl-10 col-lg-11">
             
             <div class="page-header">
-                {# <h2 style="color:#353A40">Welcome Giallo<span style='color:#debc85;'>!</span></h2> #}
             
                 
                 <div class="d-flex justify-content-between">
@@ -16,7 +15,7 @@
                         {# Button : To create a new menu item #}
                         
                         <a data-toggle="collapse" class="btn btn-primary" href="#drop-file" role="button" aria-expanded="false" aria-controls="drop-file" style="margin-left:12px;">
-                            Ajoute un nouveau plat
+                            Ajouter un nouveau plat
                         {# </button> #}
                         </a>
                     </div>
@@ -24,30 +23,24 @@
             </div>
             <hr>  
             <div id="drop-file" class="collapse" aria-labelledby="drop-file">
-                <div style='width:500px;margin:auto;border:1px solid rgba(0,0,0,.1);padding:25px;border-radius:0.5rem;border-top:2px solid #ffc107;'>
+                <div style='width:800px;margin:auto;border:1px solid rgba(0,0,0,.1);padding:25px;border-radius:0.5rem;border-top:2px solid #E2DCCB;;'>
 
-                    {# {{ form_start(smartUploadForm) }}
-                    <div class="row">
-                        <div class="col-md-6"> 
-                        
-                        {{ form_row(smartUploadForm.classYearStart) }}
-
-                        </div>
-                        <div class="col-md-6">
-                        
-                        {{ form_row(smartUploadForm.classYearEnd) }}
-
-                        </div>
-                    </div>
+                    {{ form_start(piattoForm) }}
+                    {{ form_row(piattoForm.italien) }}
                     <br>
-                    {{ form_row(smartUploadForm.excelFile) }}
+                    {{ form_row(piattoForm.francais) }}
+                    <br>
+                    {{ form_row(piattoForm.piattoType) }}
+                    
+                    <br>
+                    {{ form_row(piattoForm.prix) }}
                    
                     <br>
          
-                    {{ form_row(smartUploadForm.submit) }}
+                    {{ form_row(piattoForm.submit) }}
                
                     
-                    {{ form_end(smartUploadForm) }} #}
+                    {{ form_end(piattoForm) }}
                     <br>
                     {# <form class="dropzone" style='color:#353A40;border-radius:0.5rem'>
                         <span class="dz-message" >Drop file here or click here to upload</span>
