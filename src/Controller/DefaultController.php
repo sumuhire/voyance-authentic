@@ -29,22 +29,40 @@ class DefaultController extends Controller{
          * Get PiattoForm
          */
         $piatto = $this->piattoForm($request);
+        /** 
+         * Get AntipastiForm & Antipasti alla carta
+         */
         $antipasti = $this->antipasti($request);
+        
  
     
         return $this->render(
         'Default/dashboard.html.twig',
+         
             [
                 'piattoForm' => $piatto[0]->createView(),
                 'antipastiForm' => $antipasti[0]->createView(),
-                'antipasti' => $antipasti[1]
+                'antipasti' => $antipasti[1],
+                
             ]
         );
     }
 
-    public function index(){
+    public function index(Request $request){
+
+        /** 
+         * Get AntipastiForm & Antipasti alla carta
+         */
+        $antipasti = $this->antipasti($request);
+
         return $this->render(
-            'Default/index.html.twig'
+            'Default/index.html.twig',
+         
+            [
+    
+                'antipasti' => $antipasti[1],
+                
+            ]
         );
     }
 
@@ -100,6 +118,8 @@ class DefaultController extends Controller{
             $entityManager->persist($antipasti);
             $entityManager->flush();
 
+            
+
         };
 
         $entrée= $this->getDoctrine()->getManager()->getRepository(Antipasti::class)->findOneById(1);
@@ -110,7 +130,35 @@ class DefaultController extends Controller{
                 $entrée
 
             ];
- 
+
+    }
+
+    public function editare(Piatto $piatto, Request $request){ 
+
+        $piattoEditareForm = $this->createForm(PiattoFormType::class, $piatto, 
+        [
+            'standalone' => true,
+        ]);
+
+        $piattoEditareForm->handleRequest($request);
+
+        if ($piattoEditareForm->isSubmitted() && $piattoEditareForm->isValid()) {
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($piatto);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('dashboard');
+
+        };
+
+        return $this->render(
+            'Default/editare.html.twig', [
+                
+                'piattoEditareForm' => $piattoEditareForm->createView(),
+
+            ]
+        );
 
     }
 

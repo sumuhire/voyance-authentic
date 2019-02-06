@@ -2298,6 +2298,12 @@ pre code
 {
     border: 0;
 }
+.form-plat
+{
+    width: 100%;
+    height: 70px!important;
+    
+}
 
 .form-control
 {

@@ -23,7 +23,7 @@ class AntipastiFormType extends AbstractType
                     'class' => Piatto::class,
                     'choice_label' => 'italien',
                     'attr' => ['class' => 'form-control form-control'],
-                    'label'=> 'Piatto Premier',
+                    'label'=> false,
                     // 'query_builder' => function (EntityRepository $er) {
                     //     return $er->createQueryBuilder('p')
                     //     ->where('p.piattoType = :val')
@@ -39,7 +39,8 @@ class AntipastiFormType extends AbstractType
                     'class' => Piatto::class,
                     'choice_label' => 'italien',
                     'attr' => ['class' => 'form-control form-control'],
-                    'label'=> 'Piatto Secondo'
+                    'label'=> false,
+                    
                 ])
             ->add(
                 'plat3',
@@ -48,7 +49,7 @@ class AntipastiFormType extends AbstractType
                     'class' => Piatto::class,
                     'choice_label' => 'italien',
                     'attr' => ['class' => 'form-control form-control'],
-                    'label'=> 'Piatto Terzi'
+                    'label'=> false
                 ])
             ->add(
                 'plat4',
@@ -57,7 +58,7 @@ class AntipastiFormType extends AbstractType
                     'class' => Piatto::class,
                     'choice_label' => 'italien',
                     'attr' => ['class' => 'form-control form-control'],
-                    'label'=> 'Piatto Quarto'
+                    'label'=> false
                 ])
         ;
 
@@ -65,7 +66,7 @@ class AntipastiFormType extends AbstractType
             $builder->add(
                 'submit',
                 SubmitType::class,
-                ['attr' => ['class' => "btn btn-primary btn-lg"], 'label' => 'Save']
+                ['attr' => ['class' => "btn btn-primary btn-lg"], 'label' => 'Salvo']
             );
         }    
     }

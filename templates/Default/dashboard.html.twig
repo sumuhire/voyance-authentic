@@ -78,7 +78,7 @@
 					
 					<!-- Heading -->
 					<h1 class="section__heading section_header__heading text-center">
-						Menu du mois
+						Menu del mese
 					</h1>
 
 				</div>
@@ -131,21 +131,21 @@
 										€{{ antipasti.plat1.prix}}
 									</div>
 									<div class="dropdown card-options"> 
-											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
-											padding: 0;
-											background: none;
-											border: none;
-											cursor: pointer;
-											display: flex;
-											align-items: center;'>
-												<i class="material-icons">more_vert</i>
-											</button>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a class="dropdown-item" href="#">Edit</a>
-												<div class="dropdown-divider"></div>
-												<a class="dropdown-item text-danger" href="#antipasti"  data-toggle="modal" class="btn btn-outline-primary" data-target="#antipasti">Change</a>
-											</div>
+										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+										padding: 0;
+										background: none;
+										border: none;
+										cursor: pointer;
+										display: flex;
+										align-items: center;'>
+											<i class="material-icons">more_vert</i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" >
+											<a class="dropdown-item" href="{{ path("editare", {id: antipasti.plat1.id }) }}">Piatto editare</a>					
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#antipasti"  data-toggle="modal" data-target="#antipasti">Alla carta</a>
 										</div>
+									</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
@@ -266,6 +266,22 @@
 									<div class="section_menu__item__price text-center">
 										€{{ antipasti.plat2.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+										padding: 0;
+										background: none;
+										border: none;
+										cursor: pointer;
+										display: flex;
+										align-items: center;'>
+											<i class="material-icons">more_vert</i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" >
+											<a class="dropdown-item" href="{{ path("editare", {id: antipasti.plat2.id }) }}">Piatto editare</a>					
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#antipasti"  data-toggle="modal" data-target="#antipasti">Alla carta</a>
+										</div>
+									</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
@@ -282,6 +298,22 @@
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
 										€{{ antipasti.plat3.prix}}
+									</div>
+									<div class="dropdown card-options"> 
+										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+										padding: 0;
+										background: none;
+										border: none;
+										cursor: pointer;
+										display: flex;
+										align-items: center;'>
+											<i class="material-icons">more_vert</i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" >
+											<a class="dropdown-item" href="{{ path("editare", {id: antipasti.plat3.id }) }}">Piatto editare</a>					
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#antipasti"  data-toggle="modal" data-target="#antipasti">Alla carta</a>
+										</div>
 									</div>	
 								</div>
 							</div> <!-- / .row -->
@@ -351,6 +383,22 @@
 									<div class="section_menu__item__price text-center">
 										€{{ antipasti.plat4.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+										padding: 0;
+										background: none;
+										border: none;
+										cursor: pointer;
+										display: flex;
+										align-items: center;'>
+											<i class="material-icons">more_vert</i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" >
+											<a class="dropdown-item" href="{{ path("editare", {id: antipasti.plat4.id }) }}">Piatto editare</a>					
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#antipasti"  data-toggle="modal" data-target="#antipasti">Alla carta</a>
+										</div>
+									</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
@@ -412,32 +460,43 @@
 			<!-- / .Modal Antipasti -->
 			<div class="modal fade" id="antipasti" tabindex="1" role="dialog" aria-labelledby="antipasti" aria-hidden="true" >
 				<div class="modal-dialog modal-dialog-centered modal-dialog-video modal-lg" role="document" >
-					<div class="modal-content" style='background-color:white;'>
-						<div class="modal-header" style="background-color:white;border-bottom:1px solid #F4F3EF;">
-							<h1 class="modal-title text-center" style="padding-right:120px;letter-spacing: 0.1em;">Antipasti alla carta</h1>
-							<i class="fas fa-times" data-dismiss="modal" style="color:#0B2E2D;padding-top:10px"></i>
-						</div>
-						<div class="modal-body" style="color:#0B2E2D;background-color:white" > 
-						  <div class="content-list-body justify-content-center" >
+					<div class="modal-content" style='padding:25px;border-top:2px solid #E2DCCB;background-color:#f0f0f0;'>
+						<h1 class="section__heading text-center" style="letter-spacing: 0.1em;text-align: center!important;">Antipasti alla carta</h1>
+						<div class="modal-body" style="color:#0B2E2D;" > 
+							<div class="content-list-body justify-content-center" >
 							{{ form_start(antipastiForm) }}
-
-							{{ form_row(antipastiForm.plat1) }}
-							<br>
-							{{ form_row(antipastiForm.plat2) }}
-							<br>
-							{{ form_row(antipastiForm.plat3) }}
-							<br>
-							{{ form_row(antipastiForm.plat4) }}
-							<br>
-						
-				 
-							{{ form_row(antipastiForm.submit) }}
-					   
-							
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form_row(antipastiForm.plat1) }}
+									</div>
+									<div class="form-group">
+										{{ form_row(antipastiForm.plat3) }}
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form_row(antipastiForm.plat2) }}
+									</div>
+									<div class="form-group">
+										{{ form_row(antipastiForm.plat4) }}
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="text-center">
+										{{ form_row(antipastiForm.submit) }}		
+									</div>
+								</div>
+							</div>
 							{{ form_end(antipastiForm) }}
+							</div>
 						</div>
 					</div>
-				</div>
+				</div>			
+			</div>
+			<!-- / .Modal Edit-->
+			
+					
 			</div>
 		</section>
 	

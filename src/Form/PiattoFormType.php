@@ -8,6 +8,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
@@ -18,18 +19,18 @@ class PiattoFormType extends AbstractType
         $builder
             ->add(
                 'italien',
-                TextType::class, 
-                ['attr' => ['class' => 'form-control form-control'],"label"=>" Plat - Italien"]
+                TextareaType::class, 
+                ['attr' => ['class' => 'form-control form-control form-plat',"placeholder"=>" Piatto in lingua italiana"],"label" => false]
                 )
             ->add(
                 'francais',
-                TextType::class, 
-                ['attr' => ['class' => 'form-control form-control'],"label"=>"Plat - Français "]
+                TextareaType::class, 
+                ['attr' => ['class' => 'form-control form-control form-plat',"placeholder"=>"Piatto in lingua francese "],"label" => false]
                 )
             ->add(
                 'prix',
                 TextType::class, 
-                ['attr' => ['class' => 'form-control form-control'],"label"=>"Prix"]
+                ['attr' => ['class' => 'form-control form-control',"placeholder"=>"Prezzo"],"label" => false]
                 )
             ->add(
                 'piattoType',
@@ -37,7 +38,8 @@ class PiattoFormType extends AbstractType
                 [
                     'class' => PiattoType::class,
                     'choice_label' => 'label',
-                    'attr' => ['class' => 'form-control form-control']
+                    'attr' => ['class' => 'form-control form-control'],
+                    "label" => false
                 ])
         ;
 
@@ -45,7 +47,7 @@ class PiattoFormType extends AbstractType
             $builder->add(
                 'submit',
                 SubmitType::class,
-                ['attr' => ['class' => "btn btn-primary btn-lg"], 'label' => 'Save']
+                ['attr' => ['class' => "btn btn-primary btn-lg"], 'label' => 'Salvo']
             );
         }    
     }

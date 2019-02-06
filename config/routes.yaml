@@ -14,6 +14,10 @@ dashboard:
   path:     /dashboard
   controller: App\Controller\DefaultController::dashboard
 
+editare:
+  path:     /dashboard{id}
+  controller: App\Controller\DefaultController::editare
+
 logout:
   path: /logout
 

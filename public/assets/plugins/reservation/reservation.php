@@ -42,12 +42,36 @@ if( !isset( $json['error'] ) ) {
 	$mail_message .= "Date: " . $date . "\r\n";
 	$mail_message .= "Time: " . $time;
 
-	// Email title
-	$mail_headers  = "Content-type: text/plain; charset=utf-8\r\n";
-	$mail_headers .= "From: {$email}\r\n";
+	// // Email title
+	// $mail_headers  = "Content-type: text/plain; charset=utf-8\r\n";
+	// $mail_headers .= "From: {$email}\r\n";
 
-	// Sending email
-	mail( $to_email, $mail_subject, $mail_message, $mail_headers );
+	// // Sending email
+	// mail( $to_email, $mail_subject, $mail_message, $mail_headers );
+
+	// // Return success message
+	// $json['success'] = 'Your reservation has been processed successfully!';
+
+	require_once __DIR__ . '/vendor/autoload_real.php';
+
+	// Create the Transport
+	$transport = (new Swift_SmtpTransport("localhost:1025"))
+	->setUsername('ineedhelp.wf3@gmail.com')
+	->setPassword('Webforce3')
+	;
+
+	// Create the Mailer using your created Transport
+	$mailer = new Swift_Mailer($transport);
+
+	// Create a message
+	$message = (new Swift_Message($mail_subject))
+	->setFrom(['ineedhelp.wf3@gmail.com' => 'Giallo.lu'])
+	->setTo($to_email)
+	->setBody($mail_message)
+	;
+
+	// Send the message
+	$result = $mailer->send($message);
 
 	// Return success message
 	$json['success'] = 'Your reservation has been processed successfully!';

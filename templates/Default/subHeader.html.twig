@@ -15,38 +15,52 @@
                         {# Button : To create a new menu item #}
                         
                         <a data-toggle="collapse" class="btn btn-primary" href="#drop-file" role="button" aria-expanded="false" aria-controls="drop-file" style="margin-left:12px;">
-                            Ajouter un nouveau plat
+                                Nuovo Piatto
                         {# </button> #}
                         </a>
                     </div>
                 </div>
             </div>
             <hr>  
-            <div id="drop-file" class="collapse" aria-labelledby="drop-file">
-                <div style='width:800px;margin:auto;border:1px solid rgba(0,0,0,.1);padding:25px;border-radius:0.5rem;border-top:2px solid #E2DCCB;;'>
-
-                    {{ form_start(piattoForm) }}
-                    {{ form_row(piattoForm.italien) }}
-                    <br>
-                    {{ form_row(piattoForm.francais) }}
-                    <br>
-                    {{ form_row(piattoForm.piattoType) }}
-                    
-                    <br>
-                    {{ form_row(piattoForm.prix) }}
-                   
-                    <br>
-         
-                    {{ form_row(piattoForm.submit) }}
+            <div id="drop-file" class="collapse" aria-labelledby="drop-file" style='width:100%;margin:auto;padding:25px;background-color:#f0f0f0;'>
                
-                    
-                    {{ form_end(piattoForm) }}
-                    <br>
-                    {# <form class="dropzone" style='color:#353A40;border-radius:0.5rem'>
-                        <span class="dz-message" >Drop file here or click here to upload</span>
-                    </form> #}
-                    
+                <div class="row">
+                    <div class="col">
+        
+                        <!-- Heading -->
+                        <h2 class="section__heading text-center">
+                        Nuovo Piatto
+                        </h2>
+                    </div>
                 </div>
+                {{ form_start(piattoForm) }}
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form_row(piattoForm.italien) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_row(piattoForm.piattoType) }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form_row(piattoForm.francais) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_row(piattoForm.prix) }}
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            {{ form_row(piattoForm.submit) }}
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                    {{ form_end(piattoForm) }}
                 
                 <br>
             </div>
