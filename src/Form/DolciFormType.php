@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Antipasti;
+use App\Entity\Dolci;
 use App\Entity\Piatto;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -11,7 +11,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Doctrine\ORM\EntityRepository;
 
-class AntipastiFormType extends AbstractType
+class DolciFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -27,7 +27,7 @@ class AntipastiFormType extends AbstractType
                     'query_builder' => function (EntityRepository $er) {
                         return $er->createQueryBuilder('p')
                             ->orderBy('p.italien', 'ASC')
-                            ->where('p.piattoType = 1');
+                            ->where('p.piattoType = 4');
                     }
                 ])
             ->add(
@@ -41,7 +41,7 @@ class AntipastiFormType extends AbstractType
                     'query_builder' => function (EntityRepository $er) {
                         return $er->createQueryBuilder('p')
                             ->orderBy('p.italien', 'ASC')
-                            ->where('p.piattoType = 1');
+                            ->where('p.piattoType = 4');
                     }     
                 ])
             ->add(
@@ -55,7 +55,7 @@ class AntipastiFormType extends AbstractType
                     'query_builder' => function (EntityRepository $er) {
                         return $er->createQueryBuilder('p')
                             ->orderBy('p.italien', 'ASC')
-                            ->where('p.piattoType = 1');
+                            ->where('p.piattoType = 4');
                     }
 
                 ])
@@ -70,7 +70,7 @@ class AntipastiFormType extends AbstractType
                     'query_builder' => function (EntityRepository $er) {
                         return $er->createQueryBuilder('p')
                             ->orderBy('p.italien', 'ASC')
-                            ->where('p.piattoType = 1');
+                            ->where('p.piattoType = 4');
                     }
                 ])
         ;
@@ -87,7 +87,7 @@ class AntipastiFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Antipasti::class,
+            'data_class' => Dolci::class,
             'standalone' => false
         ]);
     }

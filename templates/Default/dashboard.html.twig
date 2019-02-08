@@ -120,15 +120,21 @@
 					<div class="col-sm-6 section_menu__grid__item mains">
 						<div class="section_menu__item">					
 							<div class="row" style='min-height:180px'>
-								<div class="col-10" style='text-align: center;'>
+								<div class="col-10 text-center" style='text-align: center;'>
 									<h5>{{ antipasti.plat1.italien}}</h5>
 									<p>
 										{{ antipasti.plat1.francais}}	
 									</p>
 								</div>
 								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ antipasti.plat1.prix}}
+									<div class="row">
+										<div class="section_menu__item__price text-left" style='font-size:1.175rem'>
+											€{{ antipasti.plat1.prix}}
+										</div>
+										<p style='font-size:1rem;color:#E2DCCB'>&nbsp-&nbsp</p>
+										<div class="section_menu__item__price text-right" style='font-size:1.175rem'>
+											€{{ antipasti.plat1.prixEntree}}
+										</div>
 									</div>
 									<div class="dropdown card-options"> 
 										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
@@ -152,34 +158,66 @@
 					</div>
 					<div class="col-sm-6 section_menu__grid__item lunch">
 						<div class="section_menu__item">
-							<div class="row">
-								<div class="col-10">
-									<h4>Fusce id ante ut arcu consectetur</h4>
+							<div class="row" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ primi.plat1.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ primi.plat1.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€23
+										€{{ primi.plat1.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: primi.plat1.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#primi"  data-toggle="modal" data-target="#primi">Alla carta</a>
+											</div>
+										</div>
+								</div>
+							</div> <!-- / .row -->
+						</div>
+					</div>
+					<div class="col-sm-6 section_menu__grid__item dinner">
+						<div class="section_menu__item">
+							<div class="row no-gu" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ secondi.plat1.italien}}</h5>
+									<p>
+										{{ secondi.plat1.francais}}
+									</p>
+								</div>
+								<div class="col-2">
 									
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item dinner">
-						<div class="section_menu__item">
-							<div class="row no-gu">
-								<div class="col-10">
-									<h4>Fusce sed dolor eget tortor</h4>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
-									</p>
-								</div>
-								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€16
+										€{{ secondi.plat1.prix}}
+									</div>
+									<div class="dropdown card-options"> 
+										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+										padding: 0;
+										background: none;
+										border: none;
+										cursor: pointer;
+										display: flex;
+										align-items: center;'>
+											<i class="material-icons">more_vert</i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" >
+											<a class="dropdown-item" href="{{ path("editare", {id: secondi.plat1.id }) }}">Piatto editare</a>					
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#secondi"  data-toggle="modal" data-target="#secondi">Alla carta</a>
+										</div>
 									</div>
 								</div>
 							</div> <!-- / .row -->
@@ -187,50 +225,98 @@
 					</div>
 					<div class="col-sm-6 section_menu__grid__item drinks">
 						<div class="section_menu__item">
-							<div class="row">
-								<div class="col-10">
-									<h4>Phasellus non elit in dolor</h4>
+							<div class="row" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ dolci.plat1.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ dolci.plat1.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€10
+										€{{ dolci.plat1.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: dolci.plat1.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#dolci"  data-toggle="modal" data-target="#dolci">Alla carta</a>
+											</div>
+										</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
 					</div>
 					<div class="col-sm-6 section_menu__grid__item drinks">
 						<div class="section_menu__item">
-							<div class="row">
-								<div class="col-10">
-									<h4>In vel odio eu massa semper</h4>
+							<div class="row" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ dolci.plat2.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ dolci.plat2.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€35
+										€{{ dolci.plat2.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: dolci.plat2.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#dolci"  data-toggle="modal" data-target="#dolci">Alla carta</a>
+											</div>
+										</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
 					</div>
 					<div class="col-sm-6 section_menu__grid__item dinner">
 						<div class="section_menu__item">
-							<div class="row no-gu">
-								<div class="col-10">
-									<h4>Morbi ac est consectetur</h4>
+							<div class="row no-gu" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ secondi.plat2.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ secondi.plat2.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€18
+										€{{ secondi.plat2.prix}}
+									</div>
+									<div class="dropdown card-options"> 
+										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+										padding: 0;
+										background: none;
+										border: none;
+										cursor: pointer;
+										display: flex;
+										align-items: center;'>
+											<i class="material-icons">more_vert</i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" >
+											<a class="dropdown-item" href="{{ path("editare", {id: secondi.plat2.id }) }}">Piatto editare</a>					
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#secondi"  data-toggle="modal" data-target="#secondi">Alla carta</a>
+										</div>
 									</div>
 								</div>
 							</div> <!-- / .row -->
@@ -238,17 +324,33 @@
 					</div>
 					<div class="col-sm-6 section_menu__grid__item lunch">
 						<div class="section_menu__item">
-							<div class="row">
-								<div class="col-10">
-									<h4>Lorem ipsum dolor sit amet</h4>
+							<div class="row" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ primi.plat2.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ primi.plat2.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€15
+										€{{ primi.plat2.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: primi.plat2.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#primi"  data-toggle="modal" data-target="#primi">Alla carta</a>
+											</div>
+										</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
@@ -256,15 +358,21 @@
 					<div class="col-sm-6 section_menu__grid__item mains">
 						<div class="section_menu__item">
 							<div class="row" style='min-height:180px'>
-								<div class="col-10" style='text-align: center;'>
+								<div class="col-10 text-center" style='text-align: center;'>
 									<h5>{{ antipasti.plat2.italien}}</h5>
 									<p>
 										{{ antipasti.plat2.francais}}	
 									</p>
 								</div>
 								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ antipasti.plat2.prix}}
+									<div class="row">
+										<div class="section_menu__item__price text-left" style='font-size:1.175rem'>
+											€{{ antipasti.plat2.prix}}
+										</div>
+										<p style='font-size:1rem;color:#E2DCCB'>&nbsp-&nbsp</p>
+										<div class="section_menu__item__price text-right" style='font-size:1.175rem'>
+											€{{ antipasti.plat2.prixEntree}}
+										</div>
 									</div>
 									<div class="dropdown card-options"> 
 										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
@@ -289,15 +397,21 @@
 					<div class="col-sm-6 section_menu__grid__item mains">
 						<div class="section_menu__item">
 							<div class="row no-gu" style='min-height:180px'>		
-								<div class="col-10" style='text-align: center;'>
+								<div class="col-10 text-center" style='text-align: center;'>
 									<h5>{{ antipasti.plat3.italien}}</h5>
 									<p>
 										{{ antipasti.plat3.francais}}	
 									</p>
 								</div>
 								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ antipasti.plat3.prix}}
+									<div class="row">
+										<div class="section_menu__item__price text-left" style='font-size:1.175rem'>
+											€{{ antipasti.plat3.prix}}
+										</div>
+										<p style='font-size:1rem;color:#E2DCCB'>&nbsp-&nbsp</p>
+										<div class="section_menu__item__price text-right" style='font-size:1.175rem'>
+											€{{ antipasti.plat3.prixEntree}}
+										</div>
 									</div>
 									<div class="dropdown card-options"> 
 										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
@@ -321,51 +435,99 @@
 					</div>
 					<div class="col-sm-6 section_menu__grid__item lunch">
 						<div class="section_menu__item">
-							<div class="row">
-								<div class="col-10">
-									<h4>Phasellus non elit in dolor</h4>
+							<div class="row" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ primi.plat3.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ primi.plat3.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€10
+										€{{ primi.plat3.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: primi.plat3.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#primi"  data-toggle="modal" data-target="#primi">Alla carta</a>
+											</div>
+										</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
 					</div>
 					<div class="col-sm-6 section_menu__grid__item dinner">
 						<div class="section_menu__item">
-							<div class="row">
-								<div class="col-10">
-									<h4>In vel odio eu massa semper</h4>
+							<div class="row" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ secondi.plat3.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ secondi.plat3.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€35
+										€{{ secondi.plat3.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: secondi.plat3.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#secondi"  data-toggle="modal" data-target="#secondi">Alla carta</a>
+											</div>
+										</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
 					</div>
 					<div class="col-sm-6 section_menu__grid__item drinks">
 						<div class="section_menu__item">
-							<div class="row no-gu">
-								<div class="col-10">
-									<h4>Morbi ac est consectetur</h4>
+							<div class="row no-gu" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ dolci.plat3.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ dolci.plat3.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€18
+										€{{ dolci.plat3.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: dolci.plat3.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#dolci"  data-toggle="modal" data-target="#dolci">Alla carta</a>
+											</div>
+										</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
@@ -373,15 +535,21 @@
 					<div class="col-sm-6 section_menu__grid__item mains">
 						<div class="section_menu__item">
 							<div class="row" style='min-height:180px'>
-								<div class="col-10" style='text-align: center;'>
+								<div class="col-10 text-center">
 									<h5>{{ antipasti.plat4.italien}}</h5>
 									<p>
 										{{ antipasti.plat4.francais}}	
 									</p>
 								</div>
 								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ antipasti.plat4.prix}}
+									<div class="row">
+										<div class="section_menu__item__price text-left" style='font-size:1.175rem'>
+											€{{ antipasti.plat4.prix}}
+										</div>
+										<p style='font-size:1rem;color:#E2DCCB'>&nbsp-&nbsp</p>
+										<div class="section_menu__item__price text-right" style='font-size:1.175rem'>
+											€{{ antipasti.plat4.prixEntree}}
+										</div>
 									</div>
 									<div class="dropdown card-options"> 
 										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
@@ -405,33 +573,65 @@
 					</div>
 					<div class="col-sm-6 section_menu__grid__item lunch">
 						<div class="section_menu__item">
-							<div class="row">
-								<div class="col-10">
-									<h4>Fusce id ante ut arcu consectetur</h4>
+							<div class="row" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ primi.plat4.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ primi.plat4.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€23
+										€{{ primi.plat4.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: primi.plat4.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#primi"  data-toggle="modal" data-target="#primi">Alla carta</a>
+											</div>
+										</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
 					</div>
 					<div class="col-sm-6 section_menu__grid__item dinner">
 						<div class="section_menu__item">
-							<div class="row no-gu">
-								<div class="col-10">
-									<h4>Fusce sed dolor eget tortor</h4>
+							<div class="row no-gu" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ secondi.plat4.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ secondi.plat4.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€16
+										€{{ secondi.plat4.prix}}
+									</div>
+									<div class="dropdown card-options"> 
+										<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+										padding: 0;
+										background: none;
+										border: none;
+										cursor: pointer;
+										display: flex;
+										align-items: center;'>
+											<i class="material-icons">more_vert</i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" >
+											<a class="dropdown-item" href="{{ path("editare", {id: secondi.plat4.id }) }}">Piatto editare</a>					
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#secondi"  data-toggle="modal" data-target="#secondi">Alla carta</a>
+										</div>
 									</div>
 								</div>
 							</div> <!-- / .row -->
@@ -439,17 +639,33 @@
 					</div>
 					<div class="col-sm-6 section_menu__grid__item drinks">
 						<div class="section_menu__item">
-							<div class="row">
-								<div class="col-10">
-									<h4>Phasellus non elit in dolor</h4>
+							<div class="row" style='min-height:180px'>
+								<div class="col-10 text-center">
+									<h5>{{ dolci.plat4.italien}}</h5>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium, dolorum mollitia voluptas voluptatem repellat nisi quisquam, illo id molestiae minus nostrum, explicabo. Nostrum nobis alias ullam voluptatum.
+										{{ dolci.plat4.francais}}
 									</p>
 								</div>
 								<div class="col-2">
 									<div class="section_menu__item__price text-center">
-										€10
+										€{{ dolci.plat4.prix}}
 									</div>
+									<div class="dropdown card-options"> 
+											<button class="btn-options" type="button" id="task-dropdown-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='color: #E2DCCB;
+											padding: 0;
+											background: none;
+											border: none;
+											cursor: pointer;
+											display: flex;
+											align-items: center;'>
+												<i class="material-icons">more_vert</i>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" >
+												<a class="dropdown-item" href="{{ path("editare", {id: dolci.plat4.id }) }}">Piatto editare</a>					
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#dolci"  data-toggle="modal" data-target="#dolci">Alla carta</a>
+											</div>
+										</div>
 								</div>
 							</div> <!-- / .row -->
 						</div>
@@ -495,6 +711,120 @@
 				</div>			
 			</div>
 			<!-- / .Modal Edit-->
+			<!-- / .Modal primi -->
+			<div class="modal fade" id="primi" tabindex="1" role="dialog" aria-labelledby="primi" aria-hidden="true" >
+					<div class="modal-dialog modal-dialog-centered modal-dialog-video modal-lg" role="document" >
+						<div class="modal-content" style='padding:25px;border-top:2px solid #E2DCCB;background-color:#f0f0f0;'>
+							<h1 class="section__heading text-center" style="letter-spacing: 0.1em;text-align: center!important;">Primi alla carta</h1>
+							<div class="modal-body" style="color:#0B2E2D;" > 
+								<div class="content-list-body justify-content-center" >
+								{{ form_start(primiForm) }}
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											{{ form_row(primiForm.plat1) }}
+										</div>
+										<div class="form-group">
+											{{ form_row(primiForm.plat3) }}
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											{{ form_row(primiForm.plat2) }}
+										</div>
+										<div class="form-group">
+											{{ form_row(primiForm.plat4) }}
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="text-center">
+											{{ form_row(primiForm.submit) }}		
+										</div>
+									</div>
+								</div>
+								{{ form_end(primiForm) }}
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+				<!-- / .Modal Edit-->
+				<!-- / .Modal Secondi -->
+			<div class="modal fade" id="secondi" tabindex="1" role="dialog" aria-labelledby="secondi" aria-hidden="true" >
+					<div class="modal-dialog modal-dialog-centered modal-dialog-video modal-lg" role="document" >
+						<div class="modal-content" style='padding:25px;border-top:2px solid #E2DCCB;background-color:#f0f0f0;'>
+							<h1 class="section__heading text-center" style="letter-spacing: 0.1em;text-align: center!important;">Secondi alla carta</h1>
+							<div class="modal-body" style="color:#0B2E2D;" > 
+								<div class="content-list-body justify-content-center" >
+								{{ form_start(secondiForm) }}
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											{{ form_row(secondiForm.plat1) }}
+										</div>
+										<div class="form-group">
+											{{ form_row(secondiForm.plat3) }}
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											{{ form_row(secondiForm.plat2) }}
+										</div>
+										<div class="form-group">
+											{{ form_row(secondiForm.plat4) }}
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="text-center">
+											{{ form_row(secondiForm.submit) }}		
+										</div>
+									</div>
+								</div>
+								{{ form_end(secondiForm) }}
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+				<!-- / .Modal Edit-->
+				<!-- / .Modal Dolci -->
+			<div class="modal fade" id="dolci" tabindex="1" role="dialog" aria-labelledby="dolci" aria-hidden="true" >
+					<div class="modal-dialog modal-dialog-centered modal-dialog-video modal-lg" role="document" >
+						<div class="modal-content" style='padding:25px;border-top:2px solid #E2DCCB;background-color:#f0f0f0;'>
+							<h1 class="section__heading text-center" style="letter-spacing: 0.1em;text-align: center!important;">Dolci alla carta</h1>
+							<div class="modal-body" style="color:#0B2E2D;" > 
+								<div class="content-list-body justify-content-center" >
+								{{ form_start(dolciForm) }}
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											{{ form_row(dolciForm.plat1) }}
+										</div>
+										<div class="form-group">
+											{{ form_row(dolciForm.plat3) }}
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											{{ form_row(dolciForm.plat2) }}
+										</div>
+										<div class="form-group">
+											{{ form_row(dolciForm.plat4) }}
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="text-center">
+											{{ form_row(dolciForm.submit) }}		
+										</div>
+									</div>
+								</div>
+								{{ form_end(dolciForm) }}
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+				<!-- / .Modal Edit-->
 			
 					
 			</div>

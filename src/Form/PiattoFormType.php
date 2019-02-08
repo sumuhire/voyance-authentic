@@ -33,13 +33,19 @@ class PiattoFormType extends AbstractType
                 ['attr' => ['class' => 'form-control form-control',"placeholder"=>"Prezzo"],"label" => false]
                 )
             ->add(
+                'prixEntree',
+                TextType::class, 
+                ['attr' => ['class' => 'form-control form-control',"placeholder"=>"Prezzo grande (Antipasti - Formaggio)"],"label" => false,'required' => false]
+                )
+            ->add(
                 'piattoType',
                 EntityType::class, 
                 [
                     'class' => PiattoType::class,
                     'choice_label' => 'label',
                     'attr' => ['class' => 'form-control form-control'],
-                    "label" => false
+                    'label' => false,
+                    
                 ])
         ;
 

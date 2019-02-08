@@ -94,29 +94,34 @@
                     <div class="modal-body" style="color:#0B2E2D;" > 
                         <div class="content-list-body justify-content-center" >
                             {{ form_start(piattoEditareForm) }}
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        {{ form_row(piattoEditareForm.italien) }}
-                                    </div>
-                                    <div class="form-group">
-                                        {{ form_row(piattoEditareForm.piattoType) }}
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        {{ form_row(piattoEditareForm.francais) }}
-                                    </div>
-                                    <div class="form-group">
-                                        {{ form_row(piattoEditareForm.prix) }}
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="text-center">
-                                        {{ form_row(piattoEditareForm.submit) }}
-                                        
-                                    </div>
-                                </div>
+                            <div class="row">                          
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form_row(piattoEditareForm.italien) }}
+									</div>
+									<div class="form-group">
+										{{ form_row(piattoEditareForm.prix) }}
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form_row(piattoEditareForm.francais) }}
+									</div>
+									<div class="form-group">
+										{{ form_row(piattoEditareForm.prixEntree) }}
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+									{{ form_row(piattoEditareForm.piattoType) }}
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="text-center">
+										{{ form_row(piattoEditareForm.submit) }}
+										
+									</div>
+								</div>
                             </div>
                             {{ form_end(piattoEditareForm) }}
                         </div>

@@ -40,7 +40,7 @@
                             {{ form_row(piattoForm.italien) }}
                         </div>
                         <div class="form-group">
-                            {{ form_row(piattoForm.piattoType) }}
+                            {{ form_row(piattoForm.prix) }}
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -48,16 +48,21 @@
                             {{ form_row(piattoForm.francais) }}
                         </div>
                         <div class="form-group">
-                            {{ form_row(piattoForm.prix) }}
+                            {{ form_row(piattoForm.prixEntree) }}
                         </div>
                     </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                        {{ form_row(piattoForm.piattoType) }}
+                        </div>
+                    </div>   
                     <div class="col-md-12">
                         <div class="text-center">
                             {{ form_row(piattoForm.submit) }}
                             
                         </div>
                     </div>
-
+                    
                 </div>
 
                     {{ form_end(piattoForm) }}

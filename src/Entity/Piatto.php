@@ -39,6 +39,11 @@ class Piatto
      */
     private $piattoType;
 
+    /**
+     * @ORM\Column(type="string", length=30, nullable=true)
+     */
+    private $prixentree;
+
     public function __construct()
     {
         $this->piattoTypes = new ArrayCollection();
@@ -93,6 +98,18 @@ class Piatto
     public function setPiattoType(?PiattoType $piattoType): self
     {
         $this->piattoType = $piattoType;
+
+        return $this;
+    }
+
+    public function getPrixentree(): ?string
+    {
+        return $this->prixentree;
+    }
+
+    public function setPrixentree(?string $prixentree): self
+    {
+        $this->prixentree = $prixentree;
 
         return $this;
     }
