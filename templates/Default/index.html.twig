@@ -1,710 +1,464 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Moreno Architecture{% endblock %}
+
+
+{% block header %}
+
+	{% include 'header.html.twig' %}
+   
+{% endblock %}
+
 {% block body %}
-
+{# NAVBAR
+    ================================================= #}
+    <nav class="navbar navbar-expand-xl navbar-dark navbar-togglable fixed-top" >
+        <div class="container">
+  
+          {# Brand #}
+          <a class="navbar-brand" href="{{path('index')}}">
+            
+             <img alt="moreno" id="logo" src="assets/img/moreno_logo.png" style='width:70%;height:70%' />
+             
+          </a>
+          
     
-	<!-- NAVBAR
+          {# Toggler #}
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          {# Collapse #}
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+          
+  
+            {# Social #}
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item-divider" >
+                <span class="nav-link" >
+                  <span></span>
+                </span>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-facebook"></i> 
+                  <span class="d-xl-none ml-2">
+                    Facebook
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-twitter"></i> 
+                  <span class="d-xl-none ml-2">
+                    Twitter
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-instagram"></i> 
+                  <span class="d-xl-none ml-2">
+                    Instagram
+                  </span>
+                </a>
+              </li>
+            </ul>
+  
+            {# Links #}
+            <ul class="navbar-nav ml-auto" style='letter-spacing: 0.1em;'>
+             
+              <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link" id='getStarted' >
+                    Projects
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link"id='getStarted' >
+                    Press
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link" id='getStarted' >
+                    About us
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link" id='getStarted' >
+                    Jobs
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link"id='getStarted' >
+                    Contact
+                </a>
+			  </li>
+              
+  
+              
+            </ul>
+  
+          </div> {# / .navbar-collapse #}
+    
+        </div> {# / .container #}    
+      </nav>
+
+
+	<!-- INFO
 	================================================== -->
-	<nav class="navbar navbar-light navbar-expand-lg fixed-top">
-		<div class="container">
-
-			<!-- Navbar: Brand -->
-			<a class="navbar-brand d-lg-none" href="index.html">
-					<img src="assets/img/giallo_caffé.png" class="img-fluid" alt="..." >
-			</a>
-
-			<!-- Navbar: Toggler -->
-			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button> -->
-			
-			<!-- Navbar: Collapse -->
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-				<!-- Navbar navigation: Left -->
-				<ul class="navbar-nav mr-auto">
-					<!--  <li class="nav-item">
-						<a class="nav-link" href="about-us.html">About Us</a>
-					</li> -->
-					<li class="nav-item dropdown">
-							<!-- <a class="nav-link" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Menu
-							</a>
-						 <a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Menu
+	<section class="section section_info section_no-padding_top section_no-padding_bottom img-fluid" >
+			<div >
+				<div class="row align-items-justify">
+						
+					<div class="col-md-8 section_gallery__grid__item" style='margin-top:30px' >						
+						<a href="" >
+							<img src="assets/img/14081_II_141016_1007_NW_0000.jpg" class='img-fluid' alt="..." >
 						</a>
-						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
-							<a class="dropdown-item" href="menu.html">Menu: Standard</a>
-							<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
-						</div> 
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="reservation.html">Reservation</a>
-					</li>-->
-				</ul>
-
-				<!-- Navbar: Brand -->
-				<a class="navbar-brand d-none d-lg-flex" href="index.html">
-						<img src="assets/img/giallo_caffé.png"  alt="..." >
-				</a>
-
-				<!-- Navbar navigation: Right -->
-				<ul class="navbar-nav ml-auto">
-					<!--<li class="nav-item">
-						<a class="nav-link" href="news-and-events.html">News & Events</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="gallery.html">Gallery</a>
-					</li> 
-					<li class="nav-item">
-						<a class="nav-link" href="contact-us.html">Contact</a>
-					</li>-->
-				</ul>
-
-			</div> <!-- / .navbar-collapse -->
-
-		</div> <!-- / .container -->
-	</nav> <!-- / .navbar -->
-
-	<!-- WELCOME
-	================================================== -->
-	<section class="section section_welcome" data-parallax="scroll" id='parallax' style='background-image:url(assets/img/landing1.jpg);min-height: 150px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;' >
-
-		<!-- Content -->
-		<div class="section_welcome__main">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col">
-						
-						<!-- Heading -->
-						<h2 class="section__preheading section_welcome__preheading text-center text-muted">
-							<span class="text-primary" style='color:#E2DCCB!important'>Caffè</span> / Ristorante
-						</h2>
-						<h1 class="section__heading section_welcome__heading text-center">
-							Giallo
-						</h1>
-						
-
-						<!-- Button -->
-						<div class="text-center mb-0" data-toggle="animation" data-animation="fadeUp" data-animation-order="3" data-animation-trigger="load">
-							<a href="#section_menu_nav" class="nav-item__menu" style='margin-right:10px;transition: 0.15s ease-in-out'>
-								Menu
-							</a>
-							<a href="#section_reservation" class="btn btn-primary text-white" style='margin-left:10px'>
-								Réservation
-							</a>
-						</div>
-		
 					</div>
+						
+					
+					<div class="col-md-1"></div>
+					<div class="col-md-2 section_gallery__grid__item" style='margin-top:70px' >
+						<a href="" >
+							<img src="assets/img/one.jpg" class='img-fluid' alt="...">
+						</a>
+						<div class="section_info__body">
+							<h3 class="section__preheading text-primary">
+								<time datetime="2017-08-29">Architecture</time>
+							</h3>
+							<p class="section__subheading" style='margin-bottom:0px'>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
+								</p>
+						</div>					
+					</div>
+					<div class="col-md-1"></div>
 				</div> <!-- / .row -->
 			</div> <!-- / .container -->
-		</div>
-
-		<!-- Footer -->
-		<div class="section_welcome__footer">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md">			
-						<div class="section_welcome__footer__address text-center text-lg-left" >
-							<a href="tel:+35226200027" style='color:hsla(0,0%,100%,.7)!important;'><i class="fa fa-phone" style='color:#E2DCCB;'></i>&nbsp&nbsp +352 26 20 00 27</a> 
-						</div>
-					</div>
-					<div class="col-md">
-						
-						<!-- Address -->
-						<div class="section_welcome__footer__address text-center text-lg-right">
-							 <a href="http://maps.google.com/?q=22-24 rue du curé, Luxembourg, 1368" style='color:hsla(0,0%,100%,.7)!important;'><i class="fa fa-map-marker" style='color:#E2DCCB;'></i>&nbsp&nbsp 22-24 rue du curé, Luxembourg, 1368</a>
-						</div>
-
-					</div>
-				</div> <!-- / .row -->
-			</div> <!-- / .container -->
-		</div>
-
-	</section>
-
-	<!-- DISCOVER
-	================================================== -->
-	<section class="section section_discover section_no-padding_bottom" >
-		<div class="container" >
-			<div class="row">
-				<div class="col-md-2 align-self-start">
-					
-					<!-- Description -->
-					<p class="section_discover__description">
-						De la qualité, naît la convivialité.
-					</p>
-	
-				</div>
-				<div class="col-md-4 align-self-start">
-					
-					<!-- Image -->
-					<div class="section_discover__img">
-						<img src="assets/img/giallo-7.jpg" class="img-fluid" alt="...">
-					</div>
-
-				</div>
-				<div class="col-md-6 align-self-center">
-					
-					<!-- Content -->
-					<h2><em>Un intérieur</em> soigné</h2>
-					<p>
-						Alliant la pierre et le bois, nous vous acceuillons dans une atmosphère chaleureuse décorée avec goût.
-						
-					</p>
-					<!-- Sobre ou sophistiquée, l'élégance est une seconde nature dans la culture italienne.  -->
-
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</section>
-
-	<!-- DISCOVER
-	================================================== -->
-	<section class="section section_discover">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2 order-md-2 align-self-end">
-					
-					<!-- Description -->
-					<p class="section_discover__description">
-							De la qualité, naît la satiété.
-					</p>
-	
-				</div>
-				<div class="col-md-4 order-md-3 align-self-start">
-					
-					<!-- Image -->
-					<div class="section_discover__img alt">
-						<img src="assets/img/giallo-13.jpg" class="img-fluid" alt="..." style='max-width:120%'>
-					</div>
-
-				</div>
-				<div class="col-md-6 order-md-1 align-self-center">
-					
-					<!-- Content -->
-					<h2><em>Des Ingrédients</em> d'Italie</h2>
-					<p>
-						Comme avant-goût, la célèbre truffe blanche d'Alba, la savoureuse burrata des Pouilles ou notre huile d'olive maison produite dans la province de Sienne en Toscane. 
-					</p>
-					<!-- Chaque semaine, nous sommes fournis en produits frais et de saison par la crème des artisans de bouche d'Italie -->
-
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</section>
-
-	<!-- ABOUT
-	================================================== -->
-	<section class="section section_about">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-	
-					<!-- Description -->
-					<p class="section_about__description">
-							La cuisine d'un peuple est le seul témoin assuré de sa civilisation.
-					</p>
-	
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</section>
-
-	<!-- MENU
-	================================================== -->
-	<section class="section section_menu section_border_bottom" id="section_menu_nav">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<p class="section__subheading text-center">
-							Notre carte change quelques fois par mois,
-nous vous invitons à revenir la consulter.
-					</p>
-
-					</div>
-				</div> <!-- / .row -->
-				<div class="row">
-					<div class="col">
-						
-						<!-- Navigation -->
-						<nav class="section_menu__nav" >
-							<ul>
-								<li class="active">
-									<a href="#menu_no-images" data-filter=".mains">Antipasti</a>
-								</li>
-								<li>
-									<a href="#menu_no-images" data-filter=".lunch">Primi</a>
-								</li>
-								<li>
-									<a href="#menu_no-images" data-filter=".dinner">Secondi</a>
-								</li>
-								<li>
-									<a href="#menu_no-images" data-filter=".drinks">Dolci</a>
-								</li>
-							</ul>
-						</nav>
-	
-					</div>
-				</div>
-				<div class="row section_menu__grid" id="menu_no-images">
-					<div class="col-sm-6 section_menu__grid__item mains">
-						<div class="section_menu__item">					
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center" style='text-align: center;'>
-									<h5>{{ antipasti.plat1.italien}}</h5>
-									<p>
-										{{ antipasti.plat1.francais}}	
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="row">
-										<div class="section_menu__item__price text-left" style='font-size:1.175rem'>
-											€{{ antipasti.plat1.prix}}
-										</div>
-										<p style='font-size:1rem;color:#E2DCCB'>&nbsp-&nbsp</p>
-										<div class="section_menu__item__price text-right" style='font-size:1.175rem'>
-											€{{ antipasti.plat1.prixEntree}}
-										</div>
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item lunch">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ primi.plat1.italien}}</h5>
-									<p>
-										{{ primi.plat1.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ primi.plat1.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item dinner">
-						<div class="section_menu__item">
-							<div class="row no-gu" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ secondi.plat1.italien}}</h5>
-									<p>
-										{{ secondi.plat1.francais}}
-									</p>
-								</div>
-								<div class="col-2">			
-									<div class="section_menu__item__price text-center">
-										€{{ secondi.plat1.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item drinks">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ dolci.plat1.italien}}</h5>
-									<p>
-										{{ dolci.plat1.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ dolci.plat1.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item drinks">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ dolci.plat2.italien}}</h5>
-									<p>
-										{{ dolci.plat2.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ dolci.plat2.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item dinner">
-						<div class="section_menu__item">
-							<div class="row no-gu" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ secondi.plat2.italien}}</h5>
-									<p>
-										{{ secondi.plat2.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ secondi.plat2.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item lunch">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ primi.plat2.italien}}</h5>
-									<p>
-										{{ primi.plat2.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ primi.plat2.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item mains">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center" style='text-align: center;'>
-									<h5>{{ antipasti.plat2.italien}}</h5>
-									<p>
-										{{ antipasti.plat2.francais}}	
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="row">
-										<div class="section_menu__item__price text-left" style='font-size:1.175rem'>
-											€{{ antipasti.plat2.prix}}
-										</div>
-										<p style='font-size:1rem;color:#E2DCCB'>&nbsp-&nbsp</p>
-										<div class="section_menu__item__price text-right" style='font-size:1.175rem'>
-											€{{ antipasti.plat2.prixEntree}}
-										</div>
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item mains">
-						<div class="section_menu__item">
-							<div class="row no-gu" style='min-height:160px'>		
-								<div class="col-10 text-center" style='text-align: center;'>
-									<h5>{{ antipasti.plat3.italien}}</h5>
-									<p>
-										{{ antipasti.plat3.francais}}	
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="row">
-										<div class="section_menu__item__price text-left" style='font-size:1.175rem'>
-											€{{ antipasti.plat3.prix}}
-										</div>
-										<p style='font-size:1rem;color:#E2DCCB'>&nbsp-&nbsp</p>
-										<div class="section_menu__item__price text-right" style='font-size:1.175rem'>
-											€{{ antipasti.plat3.prixEntree}}
-										</div>
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item lunch">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ primi.plat3.italien}}</h5>
-									<p>
-										{{ primi.plat3.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ primi.plat3.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item dinner">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ secondi.plat3.italien}}</h5>
-									<p>
-										{{ secondi.plat3.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ secondi.plat3.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item drinks">
-						<div class="section_menu__item">
-							<div class="row no-gu" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ dolci.plat3.italien}}</h5>
-									<p>
-										{{ dolci.plat3.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ dolci.plat3.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item mains">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ antipasti.plat4.italien}}</h5>
-									<p>
-										{{ antipasti.plat4.francais}}	
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="row">
-										<div class="section_menu__item__price text-left" style='font-size:1.175rem'>
-											€{{ antipasti.plat4.prix}}
-										</div>
-										<p style='font-size:1rem;color:#E2DCCB'>&nbsp-&nbsp</p>
-										<div class="section_menu__item__price text-right" style='font-size:1.175rem'>
-											€{{ antipasti.plat4.prixEntree}}
-										</div>
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item lunch">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ primi.plat4.italien}}</h5>
-									<p>
-										{{ primi.plat4.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ primi.plat4.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item dinner">
-						<div class="section_menu__item">
-							<div class="row no-gu" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ secondi.plat4.italien}}</h5>
-									<p>
-										{{ secondi.plat4.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ secondi.plat4.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-					<div class="col-sm-6 section_menu__grid__item drinks">
-						<div class="section_menu__item">
-							<div class="row" style='min-height:160px'>
-								<div class="col-10 text-center">
-									<h5>{{ dolci.plat4.italien}}</h5>
-									<p>
-										{{ dolci.plat4.francais}}
-									</p>
-								</div>
-								<div class="col-2">
-									<div class="section_menu__item__price text-center">
-										€{{ dolci.plat4.prix}}
-									</div>
-								</div>
-							</div> <!-- / .row -->
-						</div>
-					</div>
-	
-				</div> <!-- / .row -->
-			</div> <!-- / .container -->	
 		</section>
 	
-	<!-- RESERVATION
-	================================================== -->
-	<section class="section section_reservation section_gray" id="section_reservation">
+
+	<!-- HERO
+    ================================================== -->
+    <section class="section section-top section-full " data-parallax="scroll"  style='background-image:url(assets/img/scandinavie.jpg);min-height:450px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;'>
+
+		<!-- Overlay -->
+		<div class="bg-overlay"></div>
+
+		<!-- Content -->
 		<div class="container">
-			<div class="row">
-				<div class="col">
+		  <div class="row justify-content-center align-items-center">
+			<div class="col-md-8 col-lg-7">
+  
+			
+  
+  
+			</div>
+		  </div> <!-- / .row -->
+		</div> <!-- / .container -->
+  
+		</section>
+	</br>
+	  <!-- INFO
+	================================================== -->
+	<section class="section section_info section_info_opposite section_no-padding_top section_no-padding_bottom">
+			<div >
+				<div class="row align-items-justify">
+						<div class="col-md-1 order-md-1"></div>
+					<div class="col-md-6 order-md-3 section_gallery__grid__item">
+						
+						
+							<a href="" >
+								<img src="assets/img/DSC_5327.jpg" class='img-fluid' alt="...">
+							</a>
+						</br>
+						
+							
+						<a href="" >
+								<img src="assets/img/PLAN_MASSE_OCOBRE_2014_low.jpg" class='img-fluid' alt="...">
+							</a>
+						
 	
-					<!-- Heading -->
-					<h2 class="section__heading text-center">
-					Réservation en ligne
-					</h2>
- 
+					</div>
+					<div class="col-md-1 order-md-2"></div>
+					<div class="col-md-4 order-md-1 section_gallery__grid__item" >
+	
+							<div class="section_info__body" style='padding:4rem!important'>
+									<h3 class="section__preheading text-primary">
+										<time datetime="2017-08-29">Design</time>
+									</h3>
+									<p class="section__subheading" style='margin-bottom:0px'>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
+										</p>
+								</div>
+								<a href="" >
+										<img src="assets/img/DSC_5300.jpg" class='img-fluid' alt="...">
+									</a>
+						
+					</div>
+					
+				</div> <!-- / .row -->
+			</div> <!-- / .container -->
+		</section>
+
+	<!-- INFO
+	================================================== -->
+	<section class="section section_info section_no-padding_top section_no-padding_bottom">
+		<div class="container">
+			<div class="row align-items-justify">
+				<div class="col-md-6 section_gallery__grid__item">
+					
+					
+							<a href="" >
+									<img src="assets/img/eco_06_low.jpg" class='img-fluid' alt="...">
+								</a>
+				
+
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-5">
+
+						<div class="section_info__body">
+								<h3 class="section__preheading text-primary">
+									<time datetime="2017-08-29">Urbanism</time>
+								</h3>
+								<p class="section__subheading" style='margin-bottom:0px'>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
+									</p>
+							</div>
+					
 				</div>
 			</div> <!-- / .row -->
-			<div class="row justify-content-lg-center  section_reservation__row">
-				<div class="col-lg-8">
-					
-					<!-- Form -->
-					<form class="section_reservation__form" id="reservation__form">
+		</div> <!-- / .container -->
+	</section>
+
+
+	{# <!-- EVENTS
+	================================================== -->
+	<section class="section section_events section_no-padding_bottom">
+
+		<!-- Events -->
+		<div class="section_events__items">
+		
+			<!-- Event #1 -->
+			<div class="section_events__item active">
+
+				<!-- Bg image -->
+				<div class="section_events__item__bg" style="background-image: url(assets/img/16-07-14_Moreno-CBP_11_LOW.jpg);min-height:450px;background-repeat: no-repeat;background-size: cover;"></div>
+
+				<!-- Content -->
+				<div class="container">
+
+					<!-- Content: Large -->
+					<div class="section_events__item__content_lg">
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-8 col-lg-5">
+								
+								<!-- Date -->
+								<h3 class="section__preheading text-primary">
+									<time datetime="2017-09-30">September 30, 2017</time>
+								</h3>
 
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__name">Full name</label>
-									<input type="text" class="form-control" id="reservation__form__name" name="reservation__form__name" placeholder="Nom complet">
-									<div class="invalid-feedback"></div>
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__phone">Phone number</label>
-									<input type="tel" class="form-control" id="reservation__form__phone" name="reservation__form__phone" placeholder="Numéro de téléphone">
-									<div class="invalid-feedback"></div>
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__email">E-mail address</label>
-									<input type="email" class="form-control" id="reservation__form__email" name="reservation__form__email" placeholder="E-mail">
-									<div class="invalid-feedback"></div>
-								</div>
+								<!-- Heading -->
+								<h2 class="section__heading text-white">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+								</h2>
 
-							</div>
-							<div class="col-md-6">
+								<!-- Description -->
+								<p class="section__subheading">
+									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
+								</p>
 
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__people">People</label>
-									<select class="form-control" id="reservation__form__people" name="reservation__form__people">
-										<option value="1">1 personne</option>
-										<option value="2" selected="">2 personnes</option>
-										<option value="3">3 personnes</option>
-										<option value="4">4 personnes</option>
-										<option value="5">5 personnes</option>
-									</select>
-									<div class="invalid-feedback"></div>
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__date">Date</label>
-									<input type="date" class="form-control" id="reservation__form__date" name="reservation__form__date" value="2016-12-31">
-									<div class="invalid-feedback"></div>
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__time">Time</label>
-									<input type="time" class="form-control" id="reservation__form__time" name="reservation__form__time" value="18:00">
-									<div class="invalid-feedback"></div>
-								</div>
-
-							</div>
-							<div class="col">
-
-								<div class="text-center">
-									<button type="submit" class="btn btn-primary">
-										Réserver une table
-									</button>
-								</div>
+								<!-- Button -->
+								<a href="#section_reservation" class="btn btn-primary text-white">
+									Read more
+								</a>
 
 							</div>
 						</div> <!-- / .row -->
-					</form>
+					</div> <!-- / .section_events__item__content_lg -->
 
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</section>
+					<!-- Content: Small -->
+					<div class="section_events__item__content_sm">
+						<div class="row">
+							<div class="col-3 col-md-2 col-lg-1">
+								
+								<!-- Date -->
+								<time datetime="2017-09-30">
+									30 <small>Sep</small>
+								</time>
 
-	<!-- GALLERY
-	================================================== -->
-	<section class="section section_gallery">
-		<div class="container">
-			<div class="row">
-				<div class="col">
+							</div>
+							<div class="col-9 col-md-7 col-lg-8">
+								
+								<!-- Heading -->
+								<h4>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+								</h4>
+
+							</div>
+							<div class="col-9 ml-auto col-md-3 text-md-right">
+								
+								<!-- Button -->
+								<a href="#section_reservation" class="btn btn-primary">
+									Read more
+								</a>
+
+							</div>
+						</div> <!-- / .row -->
+					</div> <!-- / .section_events__item__content_sm -->
+
+				</div> <!-- / .container -->
+
+			</div> <!-- / .section_events__item -->
+
+			<!-- Event #2 -->
+			<div class="section_events__item">
+
+				<!-- Bg image -->
+				<div class="section_events__item__bg" style="background-image: url(assets/img/9.jpg)"></div>
+
+				<!-- Content -->
+				<div class="container">
+
+					<!-- Content: Large -->
+					<div class="section_events__item__content_lg">
+						<div class="row">
+							<div class="col-md-8 col-lg-5">
+								
+								<!-- Date -->
+								<h3 class="section__preheading text-primary">
+									<time datetime="2017-09-29">September 29, 2017</time>
+								</h3>
+
+								<!-- Heading -->
+								<h2 class="section__heading text-white">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+								</h2>
+
+								<!-- Description -->
+								<p class="section__subheading">
+									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
+								</p>
+
+								<!-- Button -->
+								<a href="#section_reservation" class="btn btn-primary text-white">
+									Read more
+								</a>
+
+							</div>
+						</div> <!-- / .row -->
+					</div> <!-- / .section_events__item__content_lg -->
+
+					<!-- Content: Small -->
+					<div class="section_events__item__content_sm">
+						<div class="row">
+							<div class="col-3 col-md-2 col-lg-1">
+								
+								<!-- Date -->
+								<time datetime="2017-09-29">
+									29 <small>Sep</small>
+								</time>
+
+							</div>
+							<div class="col-9 col-md-7 col-lg-8">
+								
+								<!-- Heading -->
+								<h4>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+								</h4>
+
+							</div>
+							<div class="col-9 ml-auto col-md-3 text-md-right">
+								
+								<!-- Button -->
+								<a href="#section_reservation" class="btn btn-primary">
+									Read more
+								</a>
+
+							</div>
+						</div> <!-- / .row -->
+					</div> <!-- / .section_events__item__content_sm -->
+
+				</div> <!-- / .container -->
+
+			</div> <!-- / .section_events__item -->
+
+			<!-- Event #3 -->
+			<div class="section_events__item">
+
+				<!-- Bg image -->
+				<div class="section_events__item__bg" style="background-image: url(assets/img/10.jpg)"></div>
+
+				<!-- Content -->
+				<div class="container">
+
+					<!-- Content: Large -->
+					<div class="section_events__item__content_lg">
+						<div class="row">
+							<div class="col-md-8 col-lg-5">
+								
+								<!-- Date -->
+								<h3 class="section__preheading text-primary">
+									<time datetime="2017-09-28">September 28, 2017</time>
+								</h3>
+
+								<!-- Heading -->
+								<h2 class="section__heading text-white">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+								</h2>
+
+								<!-- Description -->
+								<p class="section__subheading">
+									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
+								</p>
+
+								<!-- Button -->
+								<a href="#section_reservation" class="btn btn-primary text-white">
+									Read more
+								</a>
+
+							</div>
+						</div> <!-- / .row -->
+					</div> <!-- / .section_events__item__content_lg -->
+
+					<!-- Content: Small -->
+					<div class="section_events__item__content_sm">
+						<div class="row">
+							<div class="col-3 col-md-2 col-lg-1">
+								
+								<!-- Date -->
+								<time datetime="2017-09-28">
+									28 <small>Sep</small>
+								</time>
+
+							</div>
+							<div class="col-9 col-md-7 col-lg-8">
+								
+								<!-- Heading -->
+								<h4>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+								</h4>
+
+							</div>
+							<div class="col-9 ml-auto col-md-3 text-md-right">
+								
+								<!-- Button -->
+								<a href="#section_reservation" class="btn btn-primary">
+									Read more
+								</a>
+
+							</div>
+						</div> <!-- / .row -->
+					</div> <!-- / .section_events__item__content_sm -->
+
+				</div> <!-- / .container -->
+
+			</div> <!-- / .section_events__item -->
+
+		</div> <!-- / .section_events__items -->
+
+	</section> #}
 	
-				</div>
-			</div> <!-- / .row -->
-			<div class="row section_gallery__grid">
-				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
-
-					<a href="assets/img/giallo-15.jpg" data-lightbox="gallery">
-						<img src="assets/img/giallo-15.jpg" class="img-fluid" alt="...">
-					</a>
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
-
-					<a href="assets/img/giallo-14.jpg" data-lightbox="gallery">
-						<img src="assets/img/giallo-14.jpg" class="img-fluid" alt="...">
-					</a>
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
-
-					<a href="assets/img/giallo-16.jpg" data-lightbox="gallery">
-						<img src="assets/img/giallo-16.jpg" class="img-fluid" alt="...">
-					</a>
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
-
-					<a href="assets/img/giallo-19.jpg" data-lightbox="gallery">
-						<img src="assets/img/giallo-19.jpg" class="img-fluid" alt="...">
-					</a>
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
-
-					<a href="assets/img/giallo-18.jpg" data-lightbox="gallery">
-						<img src="assets/img/giallo-18.jpg" class="img-fluid" alt="...">
-					</a>
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
-
-					<a href="assets/img/giallo-20.jpg" data-lightbox="gallery">
-						<img src="assets/img/giallo-20.jpg" class="img-fluid" alt="...">
-					</a>
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
-
-					<a href="assets/img/chef.jpeg" data-lightbox="gallery">
-						<img src="assets/img/chef.jpeg" class="img-fluid" alt="...">
-					</a>
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
-
-					<a href="assets/img/giallo-21.jpg" data-lightbox="gallery">
-						<img src="assets/img/giallo-21.jpg" class="img-fluid" alt="...">
-					</a>
-
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</section>
-
-	<!-- MAP
-	================================================== -->
-	<!-- <section class="section section_map">
-		<div class="section_map__map" data-lat="40.7590403" data-lng="-74.0392713" data-zoom="12" data-info="<h4 class='section_map__map__heading text-center'>Touche restaurant</h4><p class='section_map__map__content text-center text-muted'>1234 Altschul, New York, NY 10027-0000<br>+1 987 654 3210</p>" ></div>
-	</section> -->
 
 	<!-- FOOTER
 	================================================== -->
@@ -715,11 +469,10 @@ nous vous invitons à revenir la consulter.
 				
 					<!-- About Us -->
 					<h5 class="section_footer__heading">
-							Nos appart-
-							hôtels
+							About us
 					</h5>
 					<p style='text-align:justify' >
-							Depuis toujours chez <a href='https://www.mghotels.lu/fr/' target="_blank" style='color:#E2DCCB;font-size:0.95em'>MG HOTELS</a>, nous sommes convaincus que le vrai luxe n’est pas dans l’excès. Il est au contraire dans la sobriété. Il refuse l’outrance et l’artifice, se méfie du cérémonieux. C’est la raison pour laquelle nous avons épuré l’expérience jusqu’à en extraire l’essence : une forme d’élégance discrète que vous ressentirez dès votre arrivée dans nos différents appart-hôtels.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
 					</p>
 
 				</div>
@@ -731,29 +484,16 @@ nous vous invitons à revenir la consulter.
 					</h5>
 					<ul class="section_footer__info">
 						<li>
-							<i class="fa fa-map-marker"></i> 22 - 24 rue du curé, Luxembourg, L-1386
+							<i class="fa fa-map-marker"></i> 312, RUE DE CESSANGE L-1321 LUXEMBOURG
 						</li>
 						<li>
-							<i class="fa fa-phone"></i> +352 26 20 00 27
+							<i class="fa fa-phone"></i> +352 26 48 27 75
 						</li>
 						<li>
-							<i class="fa fa-envelope-o"></i> <a href="mailto:admin@domain.com">info@giallo.lu</a>
+							<i class="fa fa-envelope-o"></i> <a href="mailto:admin@domain.com">MORENO@MORENO.LU
+							</a>
 						</li>
 					</ul>
-
-				</div>
-				<div class="col-sm-4">
-				
-					<!-- Opening hours -->
-					<h5 class="section_footer__heading">
-						Heure d'ouverture
-					</h5>
-					<div class="section_footer__open">
-						<div class="section_footer__open__days">Mardi - Dimanche midi</div>
-						<div class="section_footer__open__time">12:00 - 15:00</div>
-						<div class="section_footer__open__time">19:00 - 22:30</div>
-					</div>
-					
 
 				</div>
 			</div> <!-- / .row -->
@@ -762,7 +502,7 @@ nous vous invitons à revenir la consulter.
 				
 					<!-- Copyright -->
 					<div class="section_footer__copyright">
-						<i class="fa fa-copyright"></i> <span id="js-current-year"></span> Giallo. Tous droits réservés.
+						<i class="fa fa-copyright"></i> <span id="js-current-year"></span> Moreno. Tous droits réservés.
 					</div>
 
 				</div>
