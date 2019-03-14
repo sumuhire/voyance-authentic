@@ -1,0 +1,196 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Moreno Architecture{% endblock %}
+
+
+{% block header %}
+
+{# NAVBAR
+    ================================================= #}
+    <nav class="navbar navbar-expand-xl navbar-dark navbar-togglable fixed-top" >
+        <div class="container">
+  
+          {# Brand #}
+          <a class="navbar-brand" href="{{path('index')}}">
+            
+              <img alt="moreno" id="logo" src="assets/img/LOGO COMPLET MORENO 8019.png" style='width:166px;height:26px' />
+             
+          </a>
+          
+    
+          {# Toggler #}
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          {# Collapse #}
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+          
+  
+            {# Social #}
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item-divider" >
+                <span class="nav-link" >
+                  <span></span>
+                </span>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-facebook"></i> 
+                  <span class="d-xl-none ml-2">
+                    Facebook
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-twitter"></i> 
+                  <span class="d-xl-none ml-2">
+                    Twitter
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-instagram"></i> 
+                  <span class="d-xl-none ml-2">
+                    Instagram
+                  </span>
+                </a>
+              </li>
+            </ul>
+  
+            {# Links #}
+            <ul class="navbar-nav ml-auto" style='letter-spacing: 0.1em;'>
+             
+              <li class="nav-item">
+                <a href="{{path('projects')}}" class="nav-link" id='getStarted' >
+                    Projects
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{path('press')}}" style='border-bottom:2px solid #E2DCCB' class="nav-link"id='getStarted' >
+                    Press
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="{{path('about')}}" class="nav-link" id='getStarted' >
+                    About
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link" id='getStarted' >
+                    Jobs
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link"id='getStarted' >
+                    Contact
+                </a>
+			  </li>
+              
+  
+              
+            </ul>
+            
+  
+        </div> {# / .navbar-collapse #}
+    
+        </div> {# / .container #}    
+      </nav>
+      {% endblock %}
+
+{% block body %}
+      <!-- HERO
+    ================================================== -->
+    <section class="section section-top">
+
+            <!-- Content -->
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+      
+                  {# <!-- Preheading -->
+                  <p class="font-weight-medium text-center text-xs text-uppercase text-primary" data-toggle="animation" data-animation="fadeUp" data-animation-order="0" data-animation-trigger="load">
+                    by Simpleqode
+                  </p>
+                  
+                  <!-- Heading -->
+                  <h1 class="mb-4 text-center" data-toggle="animation" data-animation="fadeUp" data-animation-order="1" data-animation-trigger="load">
+                    Creating beautiful layouts like no one else
+                  </h1> #}
+      
+                  {# <!-- Text -->
+                  <p class="mb-6 text-center text-muted" data-toggle="animation" data-animation="fadeUp" data-animation-order="2" data-animation-trigger="load">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor voluptas harum aperiam minus corporis, nesciunt nobis quaerat voluptatumunt qui similique.
+                  </p> #}
+      
+                </div>
+              </div> <!-- / .row -->
+              <div class="row form-row align-items-center">
+                <div class="col-3">
+      
+                  <div class="img-square section_gallery__grid__item">
+                    <a href="" target="_blank"  >
+                      <img src="assets/img/elle.jpg" alt="..." class="img-fluid">
+                    </a>
+                  </div>
+                  
+                </div>
+                <div class="col-6">
+                  <div class="row form-row align-items-end mb-2">
+                    <div class="col-7">
+                      
+                      <div class="img-square section_gallery__grid__item">
+                        <a href="" target="_blank" >
+                          <img src="assets/img/wort.png" alt="..." class="img-fluid">
+                        </a>
+                      </div>
+      
+                    </div>
+                    <div class="col-5">
+                      
+                      <div class="img-square section_gallery__grid__item">
+                        <a href="" target="_blank" >
+                          <img src="assets/img/wunnen.jpg" alt="..." class="img-fluid">
+                        </a>
+                      </div>
+      
+                    </div>
+                  </div> <!-- / .row -->
+                  <div class="row form-row">
+                    <div class="col-5">
+                      
+                      <div class="img-square section_gallery__grid__item">
+                        <a href="https://archiduc.lu/a/detail/news/moreno-architecture-pour-le-cityshopping-info-point/108434" target="_blank" >
+                          <img src="assets/img/archiduc.jpg" alt="..." class="img-fluid">
+                        </a>
+                      </div>
+      
+                    </div>
+                    <div class="col-7">
+                      
+                      <div class="img-square section_gallery__grid__item">
+                        <a href="http://paperjam.lu/news/le-chantier-dopkorn-vu-du-ciel"  target="_blank" >
+                          <img src="assets/img/paperjam.jpg" alt="..." class="img-fluid">
+                        </a>
+                      </div>
+      
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="col-3">
+      
+                  <div class="img-square section_gallery__grid__item">
+                    <a href="https://www.archdaily.com/804469/one-on-one-moreno-architecture" target="_blank" >
+                      <img src="assets/img/ArchDaily.jpg" alt="..." class="img-fluid">
+                    </a>
+                  </div>
+                  
+                </div>
+              </div> <!-- / .row -->
+            </div> <!-- / .container -->
+      
+          </section>
+
+    {% endblock %}

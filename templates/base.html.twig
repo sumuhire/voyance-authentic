@@ -25,6 +25,8 @@
         <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/lightbox/css/lightbox.min.css')}}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/flickity/flickity.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/carousel/css/owl.carousel.css')}}">
+        
 
         <!-- CSS Global -->
         <!-- build:css assets/css/theme.min.css -->
@@ -37,10 +39,21 @@
 
 
     <body>
+        {% block header %}
+
+            {% include 'header.html.twig' %}
+           
+        {% endblock %}
         
         {% block body %}
         
         {% endblock %}
+
+        {% block footer %}
+
+            {% include 'footer.html.twig' %}
+            
+	    {% endblock %}
         
         {% block javascripts %}
 
@@ -59,7 +72,7 @@
         <script src="{{ asset('assets/plugins/lightbox/js/lightbox.min.js')}}"></script>
         <script src="{{ asset('assets/plugins/reservation/reservation.js')}}"></script>
         <script src="{{ asset('assets/plugins/alerts/alerts.js')}}"></script>
-
+        <script src="{{ asset('assets/plugins/carousel/js/owl.carousel.js')}}"></script>
         <!-- JS Custom -->
         <!-- build:js assets/js/theme.min.js -->
         <script src="{{ asset('assets/js/theme.js')}}"></script>

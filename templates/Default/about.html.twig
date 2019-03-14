@@ -1,0 +1,389 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Moreno Architecture{% endblock %}
+
+
+{% block body %}
+
+{% block header %}
+
+{# NAVBAR
+    ================================================= #}
+    <nav class="navbar navbar-expand-xl navbar-dark navbar-togglable fixed-top" >
+        <div class="container">
+  
+          {# Brand #}
+          <a class="navbar-brand" href="{{path('index')}}">
+            
+             <img alt="moreno" id="logo" src="assets/img/LOGO COMPLET MORENO 8019.png" style='width:30%;height:30%' />
+             
+          </a>
+          
+    
+          {# Toggler #}
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          {# Collapse #}
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+          
+  
+            {# Social #}
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item-divider" >
+                <span class="nav-link" >
+                  <span></span>
+                </span>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-facebook"></i> 
+                  <span class="d-xl-none ml-2">
+                    Facebook
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-twitter"></i> 
+                  <span class="d-xl-none ml-2">
+                    Twitter
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fab fa-instagram"></i> 
+                  <span class="d-xl-none ml-2">
+                    Instagram
+                  </span>
+                </a>
+              </li>
+            </ul>
+  
+            {# Links #}
+            <ul class="navbar-nav ml-auto" style='letter-spacing: 0.1em;'>
+             
+              <li class="nav-item">
+                <a href="{{path('projects')}}" class="nav-link" id='getStarted' >
+                    Projects
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{path('press')}}"  class="nav-link"id='getStarted' >
+                    Press
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="{{path('about')}}" style='border-bottom:2px solid #E2DCCB' class="nav-link" id='getStarted' >
+                    About
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link" id='getStarted' >
+                    Jobs
+                </a>
+			  </li>
+			  <li class="nav-item">
+                <a href="#book-a-demo" class="nav-link"id='getStarted' >
+                    Contact
+                </a>
+			  </li>
+              
+  
+              
+            </ul>
+            
+  
+        </div> {# / .navbar-collapse #}
+    
+        </div> {# / .container #}    
+      </nav>
+      {% endblock %}
+ <!-- HEADER
+    ================================================== -->
+    <section class="section pb-0">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            
+            <!-- Header -->
+            <div class="bg-cover" style="background-image: url(assets/img/team.jpg);min-height: 250px;background-repeat: no-repeat;background-size: cover;"></div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+<!-- ABOUT
+    ================================================== -->
+    <section class="section pb-0">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-6">
+            
+            <!-- Heading -->
+            <h3 class="mb-4">
+              We help you build your dream house, office, interior,..
+            </h3>
+
+            <!-- Content -->
+            <blockquote class="blockquote">
+              <p class="mb-0">
+                L’ activité du bureau moreno architecture est ancrée depuis sa création sur le concept d’architecture globale.
+              </p>
+            </blockquote>
+						<p class="text-muted">
+              Le bureau s’est forgé une solide réputation sur le territoire luxembourgeois, pour la gestion de projets complexes et créatifs dans des domaines variés.
+            </p>
+          </div>
+          <div class="col-md-6">
+            
+            <!-- Content -->
+           
+            <p class="text-muted">
+              En effet, ses aptitudes à traiter toutes les échelles de l’architecture, du design de mobilier au plan d’urbanisme, en passant par le graphisme, les aménagements d’intérieurs ainsi que le développement durable, en font un bureau à part.
+            </p>
+            <p class="text-muted">
+              Le bureau dispose de quatre départements : bâtiment (projets de grandes dimensions aussi bien public que privé), privé (clientèle privée), intérieur (aménagement intérieur et space management).
+
+						</p>
+						<p class="text-muted">
+              A cela, s’ajoute un département recherche, dans lequel les projets les plus complexes dans le domaine de la géométrie et de la matière sont traités.
+              L’attention apportée à s’adapter aux thèmes à traiter avec une écriture spécifique pour chaque projet ont mis en place une agence aux facettes les plus diversifiées.
+						</p>
+					
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+		</section>
+		<!-- BRANDS
+    ================================================== -->
+    <section class="section pb-0">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <!-- Heading -->
+            <!-- <h3 class="section__preheading text-primary">
+              Some of our <span class="text-primary">happy</span> clients
+            </h3> -->
+            
+            <!-- Brands -->
+            <div class="form-row align-items-center">
+              <div class="col-6 col-md">
+                
+                <!-- Item -->
+                <a href="#" class="brand-item mb-3 mb-md-0">
+                  <img src="assets/img/100.png" alt="..." >
+                </a>
+
+              </div>
+              <div class="col-6 col-md">
+                
+                <!-- Item -->
+                <a href="#" class="brand-item mb-3 mb-md-0">
+                  <img src="assets/img/deloitte_logo.png" class='img-fluid' alt="..." >
+                </a>
+
+              </div>
+              <div class="col-6 col-md">
+                
+                <!-- Item -->
+                <a href="#" class="brand-item mb-3 mb-md-0">
+                  <img src="assets/img/galerie_zidoun.png" class='img-fluid' alt="..." style='height: 80%!important;
+                  width: 80%!important;' >
+                </a>
+
+              </div>
+              <div class="col-6 col-md">
+                
+                <!-- Item -->
+                <a href="#" class="brand-item mb-3 mb-md-0">
+                  <img src="assets/img/house17.png" class='img-fluid' alt="..." >
+                </a>
+
+              </div>
+              <div class="col-6 col-md">
+                
+                <!-- Item -->
+                <a href="#" class="brand-item mb-3 mb-md-0">
+                  <img src="assets/img/soho.png" class='img-fluid' alt="..." style='background-color:rgba(7,72,143,.85);padding:5px' >
+                </a>
+
+              </div>
+              
+            </div> <!-- / .row -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+      
+    </section>
+
+    <!-- TEAM
+    ================================================== -->
+    <section class="section section_info">
+      
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-12">
+            
+            <!-- Heading -->
+            <!-- <h3 class="section__preheading text-primary">
+              People behind the scenes
+            </h3> -->
+
+            <!-- Team -->
+            <div class="row">
+              <div class="col-md-2" style='padding-right:0;padding-left:0;'>
+                
+                <!-- Card -->
+                <div class=" section_gallery__grid__item card card-sm border-0 mb-3 mb-md-0">
+                  
+                  <!-- Image -->
+                  <a href="" >
+                  <img src="assets/img/20.jpg" alt="..." class="img-fluid">
+                </a>
+                  <!-- Body -->
+                  <div class="card-body">
+                    
+                    <!-- Title -->
+                    <h1 class="section__preheading text-primary">
+                      Richard Roe, <small class="text-muted">Architecte</small>
+                    </h1>
+                    
+
+                  </div>
+
+                </div> <!-- / .card -->
+
+              </div>
+              <div class="col-md-2" style='padding-right:0;padding-left:0;'>
+                
+                <!-- Card -->
+                <div class="section_gallery__grid__item card card-sm border-0 mb-3 mb-md-0">
+                  
+                  <!-- Image -->
+                  <img src="assets/img/21.jpg" alt="..." class="img-fluid">
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    
+                    <!-- Title -->
+                    <h5 class="section__preheading text-primary">
+                      Ann Doe, <small class="text-muted">Designer</small>
+                    </h5>
+
+                  </div>
+
+                </div> <!-- / .card -->
+
+              </div>
+              <div class="col-md-2" style='padding-right:0;padding-left:0;'>
+                
+                <!-- Card -->
+                <div class="section_gallery__grid__item card card-sm border-0 mb-3 mb-md-0">
+                  
+                  <!-- Image -->
+                  <img src="assets/img/22.jpg" alt="..." class="img-fluid">
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    
+                    <!-- Title -->
+                    <h5 class="section__preheading text-primary">
+                      Jane Doe, <small class="text-muted">Copywriter</small>
+                    </h5>
+
+                  </div>
+
+                </div> <!-- / .card -->
+
+							</div>
+							<div class="col-md-2" style='padding-right:0;padding-left:0;'>
+                
+                <!-- Card -->
+                <div class="section_gallery__grid__item card card-sm border-0 mb-3 mb-md-0">
+                  
+                  <!-- Image -->
+                  <img src="assets/img/22.jpg" alt="..." class="img-fluid">
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    
+                    <!-- Title -->
+                    <h5 class="section__preheading text-primary">
+                      Jane Doe, <small class="text-muted">Copywriter</small>
+                    </h5>
+
+                  </div>
+
+                </div> <!-- / .card -->
+
+              </div>
+              <div class="col-md-2" style='padding-right:0;padding-left:0;'>
+                
+                  <!-- Card -->
+                  <div class="section_gallery__grid__item card card-sm border-0 mb-3 mb-md-0">
+                    
+                    <!-- Image -->
+                    <img src="assets/img/22.jpg" alt="..." class="img-fluid">
+  
+                    <!-- Body -->
+                    <div class="card-body">
+                      
+                      <!-- Title -->
+                      <h5 class="section__preheading text-primary">
+                        Jane Doe, <small class="text-muted">Copywriter</small>
+                      </h5>
+  
+                    </div>
+  
+                  </div> <!-- / .card -->
+  
+                </div>
+                <div class="col-md-2" style='padding-right:0;padding-left:0;'>
+                
+                    <!-- Card -->
+                    <div class="section_gallery__grid__item card card-sm border-0 mb-3 mb-md-0">
+                      
+                      <!-- Image -->
+                      <img src="assets/img/22.jpg" alt="..." class="img-fluid">
+    
+                      <!-- Body -->
+                      <div class="card-body">
+                        
+                        <!-- Title -->
+                        <h5 class="section__preheading text-primary">
+                          Jane Doe, <small class="text-muted">Copywriter</small>
+                        </h5>
+    
+                      </div>
+    
+                    </div> <!-- / .card -->
+    
+                  </div>
+            </div> <!-- / .row -->
+            
+      </div> <!-- / .container -->
+
+    </section>
+	
+
+	
+
+    
+{% endblock %}

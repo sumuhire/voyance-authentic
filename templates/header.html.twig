@@ -1,66 +1,94 @@
-<!-- NAVBAR
-	================================================== -->
-	<nav class="navbar navbar-light navbar-expand-lg fixed-top">
-		<div class="container">
-
-			<!-- Navbar: Brand -->
-			<a class="navbar-brand d-lg-none" href="index.html">
-					<img src="assets/img/moreno_logo.png" class="img-fluid" alt="..." >
-			</a>
-
-			<!-- Navbar: Toggler -->
-			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+{# NAVBAR
+    ================================================= #}
+    <nav class="navbar navbar-expand-xl navbar-dark navbar-togglable fixed-top" >
+			<div class="container">
+	  
+			  {# Brand #}
+			  <a class="navbar-brand" href="{{path('index')}}">
+				
+					<img alt="moreno" id="logo" src="assets/img/LOGO COMPLET MORENO 8019.png" style='width:166px;height:26px' />
+				 
+			  </a>
+			  
+		
+			  {# Toggler #}
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
 				<span class="navbar-toggler-icon"></span>
-			</button> -->
-			
-			<!-- Navbar: Collapse -->
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-				<!-- Navbar navigation: Left -->
+			  </button>
+		
+			  {# Collapse #}
+			  <div class="collapse navbar-collapse" id="navbarCollapse">
+			  
+	  
+				{# Social #}
 				<ul class="navbar-nav mr-auto">
-					<!--  <li class="nav-item">
-						<a class="nav-link" href="about-us.html">About Us</a>
-					</li> -->
-					<li class="nav-item dropdown">
-							<!-- <a class="nav-link" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Menu
-							</a>
-						 <a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Menu
-						</a>
-						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
-							<a class="dropdown-item" href="menu.html">Menu: Standard</a>
-							<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
-						</div> 
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="reservation.html">Reservation</a>
-					</li>-->
+				  <li class="nav-item-divider" >
+					<span class="nav-link" >
+					  <span></span>
+					</span>
+				  </li>
+				  <li class="nav-item">
+					<a href="#" class="nav-link">
+					  <i class="fab fa-facebook"></i> 
+					  <span class="d-xl-none ml-2">
+						Facebook
+					  </span>
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="#" class="nav-link">
+					  <i class="fab fa-twitter"></i> 
+					  <span class="d-xl-none ml-2">
+						Twitter
+					  </span>
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="#" class="nav-link">
+					  <i class="fab fa-instagram"></i> 
+					  <span class="d-xl-none ml-2">
+						Instagram
+					  </span>
+					</a>
+				  </li>
 				</ul>
-
-				<!-- Navbar: Brand -->
-				<a class="navbar-brand d-none d-lg-flex" href="index.html">
-						<img src="assets/img/moreno_logo.png"  alt="..." >
-				</a>
-
-				<!-- Navbar navigation: Right -->
-				<ul class="navbar-nav ml-auto">
-					<!--<li class="nav-item">
-						<a class="nav-link" href="news-and-events.html">News & Events</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="gallery.html">Gallery</a>
-					</li> 
-					<li class="nav-item">
-						<a class="nav-link" href="contact-us.html">Contact</a>
-					</li>-->
+	  
+				{# Links #}
+				<ul class="navbar-nav ml-auto" style='letter-spacing: 0.1em;'>
+				 
+				  <li class="nav-item">
+					<a href="{{path('projects')}}" class="nav-link" id='getStarted' >
+						Projects
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="{{path('press')}}" class="nav-link"id='getStarted' >
+						Press
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="{{path('about')}}" class="nav-link" id='getStarted' >
+						About
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="#book-a-demo" class="nav-link" id='getStarted' >
+						Jobs
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="#book-a-demo" class="nav-link"id='getStarted' >
+						Contact
+					</a>
+				  </li>
+				  
+	  
+				  
 				</ul>
-
-			</div> <!-- / .navbar-collapse -->
-
-		</div> <!-- / .container -->
-    </nav> <!-- / .navbar -->
-
-
-
-    
+	  
+			  </div> {# / .navbar-collapse #}
+		
+			</div> {# / .container #}    
+		  </nav>
+	
+	

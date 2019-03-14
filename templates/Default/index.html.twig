@@ -3,106 +3,7 @@
 {% block title %}Moreno Architecture{% endblock %}
 
 
-{% block header %}
-
-	{% include 'header.html.twig' %}
-   
-{% endblock %}
-
 {% block body %}
-{# NAVBAR
-    ================================================= #}
-    <nav class="navbar navbar-expand-xl navbar-dark navbar-togglable fixed-top" >
-        <div class="container">
-  
-          {# Brand #}
-          <a class="navbar-brand" href="{{path('index')}}">
-            
-             <img alt="moreno" id="logo" src="assets/img/moreno_logo.png" style='width:70%;height:70%' />
-             
-          </a>
-          
-    
-          {# Toggler #}
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          {# Collapse #}
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-          
-  
-            {# Social #}
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item-divider" >
-                <span class="nav-link" >
-                  <span></span>
-                </span>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fab fa-facebook"></i> 
-                  <span class="d-xl-none ml-2">
-                    Facebook
-                  </span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fab fa-twitter"></i> 
-                  <span class="d-xl-none ml-2">
-                    Twitter
-                  </span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fab fa-instagram"></i> 
-                  <span class="d-xl-none ml-2">
-                    Instagram
-                  </span>
-                </a>
-              </li>
-            </ul>
-  
-            {# Links #}
-            <ul class="navbar-nav ml-auto" style='letter-spacing: 0.1em;'>
-             
-              <li class="nav-item">
-                <a href="#book-a-demo" class="nav-link" id='getStarted' >
-                    Projects
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#book-a-demo" class="nav-link"id='getStarted' >
-                    Press
-                </a>
-			  </li>
-			  <li class="nav-item">
-                <a href="#book-a-demo" class="nav-link" id='getStarted' >
-                    About us
-                </a>
-			  </li>
-			  <li class="nav-item">
-                <a href="#book-a-demo" class="nav-link" id='getStarted' >
-                    Jobs
-                </a>
-			  </li>
-			  <li class="nav-item">
-                <a href="#book-a-demo" class="nav-link"id='getStarted' >
-                    Contact
-                </a>
-			  </li>
-              
-  
-              
-            </ul>
-  
-          </div> {# / .navbar-collapse #}
-    
-        </div> {# / .container #}    
-      </nav>
-
 
 	<!-- INFO
 	================================================== -->
@@ -111,7 +12,7 @@
 				<div class="row align-items-justify">
 						
 					<div class="col-md-8 section_gallery__grid__item" style='margin-top:30px' >						
-						<a href="" >
+						<a href="{{path('project')}}" >
 							<img src="assets/img/14081_II_141016_1007_NW_0000.jpg" class='img-fluid' alt="..." >
 						</a>
 					</div>
@@ -123,9 +24,11 @@
 							<img src="assets/img/one.jpg" class='img-fluid' alt="...">
 						</a>
 						<div class="section_info__body">
-							<h3 class="section__preheading text-primary">
-								<time datetime="2017-08-29">Architecture</time>
-							</h3>
+							<a href="{{path('projects')}}">
+								<h1 class="section__preheading text-primary">
+									Concours<span class="d-inline-block h5" style='color:#E2DCCB'>&xrarr;</span>
+								</h1>
+							</a>
 							<p class="section__subheading" style='margin-bottom:0px'>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
 								</p>
@@ -184,7 +87,7 @@
 	
 							<div class="section_info__body" style='padding:4rem!important'>
 									<h3 class="section__preheading text-primary">
-										<time datetime="2017-08-29">Design</time>
+										Privé<span class="d-inline-block h5" style='color:#E2DCCB'>&xrarr;</span>
 									</h3>
 									<p class="section__subheading" style='margin-bottom:0px'>
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
@@ -218,13 +121,13 @@
 				<div class="col-md-5">
 
 						<div class="section_info__body">
-								<h3 class="section__preheading text-primary">
-									<time datetime="2017-08-29">Urbanism</time>
-								</h3>
-								<p class="section__subheading" style='margin-bottom:0px'>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
-									</p>
-							</div>
+							<h3 class="section__preheading text-primary">
+								Urbanism<span class="d-inline-block h5" style='color:#E2DCCB'>&xrarr;</span>
+							</h3>
+							<p class="section__subheading" style='margin-bottom:0px'>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
+								</p>
+						</div>
 					
 				</div>
 			</div> <!-- / .row -->
@@ -232,283 +135,9 @@
 	</section>
 
 
-	{# <!-- EVENTS
-	================================================== -->
-	<section class="section section_events section_no-padding_bottom">
-
-		<!-- Events -->
-		<div class="section_events__items">
-		
-			<!-- Event #1 -->
-			<div class="section_events__item active">
-
-				<!-- Bg image -->
-				<div class="section_events__item__bg" style="background-image: url(assets/img/16-07-14_Moreno-CBP_11_LOW.jpg);min-height:450px;background-repeat: no-repeat;background-size: cover;"></div>
-
-				<!-- Content -->
-				<div class="container">
-
-					<!-- Content: Large -->
-					<div class="section_events__item__content_lg">
-						<div class="row">
-							<div class="col-md-8 col-lg-5">
-								
-								<!-- Date -->
-								<h3 class="section__preheading text-primary">
-									<time datetime="2017-09-30">September 30, 2017</time>
-								</h3>
-
-								<!-- Heading -->
-								<h2 class="section__heading text-white">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
-								</h2>
-
-								<!-- Description -->
-								<p class="section__subheading">
-									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
-								</p>
-
-								<!-- Button -->
-								<a href="#section_reservation" class="btn btn-primary text-white">
-									Read more
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_lg -->
-
-					<!-- Content: Small -->
-					<div class="section_events__item__content_sm">
-						<div class="row">
-							<div class="col-3 col-md-2 col-lg-1">
-								
-								<!-- Date -->
-								<time datetime="2017-09-30">
-									30 <small>Sep</small>
-								</time>
-
-							</div>
-							<div class="col-9 col-md-7 col-lg-8">
-								
-								<!-- Heading -->
-								<h4>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
-								</h4>
-
-							</div>
-							<div class="col-9 ml-auto col-md-3 text-md-right">
-								
-								<!-- Button -->
-								<a href="#section_reservation" class="btn btn-primary">
-									Read more
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_sm -->
-
-				</div> <!-- / .container -->
-
-			</div> <!-- / .section_events__item -->
-
-			<!-- Event #2 -->
-			<div class="section_events__item">
-
-				<!-- Bg image -->
-				<div class="section_events__item__bg" style="background-image: url(assets/img/9.jpg)"></div>
-
-				<!-- Content -->
-				<div class="container">
-
-					<!-- Content: Large -->
-					<div class="section_events__item__content_lg">
-						<div class="row">
-							<div class="col-md-8 col-lg-5">
-								
-								<!-- Date -->
-								<h3 class="section__preheading text-primary">
-									<time datetime="2017-09-29">September 29, 2017</time>
-								</h3>
-
-								<!-- Heading -->
-								<h2 class="section__heading text-white">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
-								</h2>
-
-								<!-- Description -->
-								<p class="section__subheading">
-									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
-								</p>
-
-								<!-- Button -->
-								<a href="#section_reservation" class="btn btn-primary text-white">
-									Read more
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_lg -->
-
-					<!-- Content: Small -->
-					<div class="section_events__item__content_sm">
-						<div class="row">
-							<div class="col-3 col-md-2 col-lg-1">
-								
-								<!-- Date -->
-								<time datetime="2017-09-29">
-									29 <small>Sep</small>
-								</time>
-
-							</div>
-							<div class="col-9 col-md-7 col-lg-8">
-								
-								<!-- Heading -->
-								<h4>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
-								</h4>
-
-							</div>
-							<div class="col-9 ml-auto col-md-3 text-md-right">
-								
-								<!-- Button -->
-								<a href="#section_reservation" class="btn btn-primary">
-									Read more
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_sm -->
-
-				</div> <!-- / .container -->
-
-			</div> <!-- / .section_events__item -->
-
-			<!-- Event #3 -->
-			<div class="section_events__item">
-
-				<!-- Bg image -->
-				<div class="section_events__item__bg" style="background-image: url(assets/img/10.jpg)"></div>
-
-				<!-- Content -->
-				<div class="container">
-
-					<!-- Content: Large -->
-					<div class="section_events__item__content_lg">
-						<div class="row">
-							<div class="col-md-8 col-lg-5">
-								
-								<!-- Date -->
-								<h3 class="section__preheading text-primary">
-									<time datetime="2017-09-28">September 28, 2017</time>
-								</h3>
-
-								<!-- Heading -->
-								<h2 class="section__heading text-white">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
-								</h2>
-
-								<!-- Description -->
-								<p class="section__subheading">
-									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
-								</p>
-
-								<!-- Button -->
-								<a href="#section_reservation" class="btn btn-primary text-white">
-									Read more
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_lg -->
-
-					<!-- Content: Small -->
-					<div class="section_events__item__content_sm">
-						<div class="row">
-							<div class="col-3 col-md-2 col-lg-1">
-								
-								<!-- Date -->
-								<time datetime="2017-09-28">
-									28 <small>Sep</small>
-								</time>
-
-							</div>
-							<div class="col-9 col-md-7 col-lg-8">
-								
-								<!-- Heading -->
-								<h4>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
-								</h4>
-
-							</div>
-							<div class="col-9 ml-auto col-md-3 text-md-right">
-								
-								<!-- Button -->
-								<a href="#section_reservation" class="btn btn-primary">
-									Read more
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_sm -->
-
-				</div> <!-- / .container -->
-
-			</div> <!-- / .section_events__item -->
-
-		</div> <!-- / .section_events__items -->
-
-	</section> #}
 	
 
-	<!-- FOOTER
-	================================================== -->
-	<footer class="section section_footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-				
-					<!-- About Us -->
-					<h5 class="section_footer__heading">
-							About us
-					</h5>
-					<p style='text-align:justify' >
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
-					</p>
-
-				</div>
-				<div class="col-sm-4">
-				
-					<!-- Contact info -->
-					<h5 class="section_footer__heading">
-						Contact
-					</h5>
-					<ul class="section_footer__info">
-						<li>
-							<i class="fa fa-map-marker"></i> 312, RUE DE CESSANGE L-1321 LUXEMBOURG
-						</li>
-						<li>
-							<i class="fa fa-phone"></i> +352 26 48 27 75
-						</li>
-						<li>
-							<i class="fa fa-envelope-o"></i> <a href="mailto:admin@domain.com">MORENO@MORENO.LU
-							</a>
-						</li>
-					</ul>
-
-				</div>
-			</div> <!-- / .row -->
-			<div class="row">
-				<div class="col-12">
-				
-					<!-- Copyright -->
-					<div class="section_footer__copyright">
-						<i class="fa fa-copyright"></i> <span id="js-current-year"></span> Moreno. Tous droits réservés.
-					</div>
-
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</footer>
+	
 
     
 {% endblock %}

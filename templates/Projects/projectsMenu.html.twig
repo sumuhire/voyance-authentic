@@ -1,0 +1,276 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Moreno Architecture{% endblock %}
+
+
+{% block header %}
+
+{# NAVBAR
+    ================================================= #}
+    
+    <nav class="navbar navbar-expand-xl navbar-dark navbar-togglable fixed-top" style='flex-flow: row wrap;'>
+        <div class="container" style='flex-direction: row; width: 100%;'>
+  
+            {# Brand #}
+            <a class="navbar-brand" href="{{path('index')}}">
+            
+                <img alt="moreno" id="logo" src="assets/img/LOGO COMPLET MORENO 8019.png" style='width:166px;height:26px' />
+                
+            </a>
+          
+    
+          {# Toggler #}
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseA" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          {# Collapse #}
+            <div class="collapse navbar-collapse" id="navbarCollapseA">
+
+                {# Social #}
+                <ul class=" row navbar-nav mr-auto">
+                <li class="nav-item-divider" >
+                    <span class="nav-link" >
+                    <span></span>
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="fab fa-facebook"></i> 
+                    <span class="d-xl-none ml-2">
+                        Facebook
+                    </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="fab fa-twitter"></i> 
+                    <span class="d-xl-none ml-2">
+                        Twitter
+                    </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="fab fa-instagram"></i> 
+                    <span class="d-xl-none ml-2">
+                        Instagram
+                    </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class=" row navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="{{path('projects')}}" style='border-bottom:2px solid #E2DCCB' class="nav-link" id='getStarted' >
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{path('press')}}" class="nav-link"id='getStarted' >
+                        Press
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{path('about')}}" class="nav-link" id='getStarted' >
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#book-a-demo" class="nav-link" id='getStarted' >
+                        Jobs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#book-a-demo" class="nav-link"id='getStarted' >
+                        Contact
+                    </a>
+                </li> 
+            </ul>
+        </div> {# / .navbar-collapse #}
+        
+        </div> {# / .container #}
+        <div class="container ml-auto" style='flex-direction: row; width: 100%;'>
+            
+            {# Toggler #}
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseB" aria-controls="navbarCollapseB" aria-expanded="false" aria-label="Toggle navigationB">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarCollapseB" style='flex-flow: row wrap;'>
+        <div class='container flex-row ml-auto' style='flex-direction: row;width: 100%;margin-top: 1rem;'>
+                
+                <ul class="navbar-nav ml-auto" style='letter-spacing: 0.1em;'>
+                
+                    <li class="nav-item">
+                        <a href="{{path('projects')}}"  style='border-left:2px solid #E2DCCB;color:#151515!important' class="nav-link" id='getStarted' >
+                            Concours
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{path('press')}}" class="nav-link"style='font-weight:400' >
+                            Privé
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#book-a-demo" class="nav-link" style='font-weight:400' >
+                            Résidentiel
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#book-a-demo" class="nav-link" style='font-weight:400' >
+                            Administratif
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#book-a-demo" class="nav-link"style='font-weight:400' >
+                            Horeca
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{path('projects')}}" class="nav-link" style='font-weight:400' >
+                            Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{path('press')}}" class="nav-link"style='font-weight:400' >
+                            Intérieur
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#book-a-demo" class="nav-link" style='font-weight:400' >
+                            Urbanisme
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#book-a-demo" class="nav-link" style='font-weight:400' >
+                            Culture
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#book-a-demo" class="nav-link" style='font-weight:400' >
+                            Retail
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#book-a-demo" class="nav-link" style='font-weight:400' >
+                            Extérieur
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                            <a href="#book-a-demo" class="nav-link" style='font-weight:400;border-right:2px solid #E2DCCB;color:#151515!important' >
+                                Equipment
+                            </a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </div> 
+        </div> {# / .navbar-collapse #} 
+    </div>   
+      </nav>
+
+      {% endblock %}
+
+      {% block body %}
+<!-- GALLERY
+	================================================== -->
+	<section class="section section_gallery" style='padding-top:10rem!important;padding-right:.1rem!important'>
+            <div class="container" style='padding-left:2.3rem'>
+                <div class="row">
+                    <div class="col">
+        
+                        {# <!-- Heading -->
+                        <h2 class="section__heading text-center">
+                            Our gallery
+                        </h2>
+    
+                        <!-- Subheading -->
+                        <p class="section__subheading text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+         #}
+                    </div>
+                </div> <!-- / .row -->
+                <div class="row section_gallery__grid">
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+    
+                        <a href=""  >
+                            <img src="assets/img/DSC_5237.jpg" class="img-fluid" alt="...">
+                        </a>
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+    
+                        <a href="{{path('project')}}"  >
+                            <img src="assets/img/14081_II_141016_1007_NW_0003.jpg" class="img-fluid" alt="...">
+                        </a>
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+    
+                        <a href=""  >
+                            <img src="assets/img/Moreno_Architecture.jpg" class="img-fluid" alt="...">
+                        </a>
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+    
+                        <a href=""  >
+                            <img src="assets/img/DSC_5327.jpg" class="img-fluid" alt="...">
+                        </a>
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+    
+                        <a href=""  >
+                            <img src="assets/img/DSC_2741_LIGHT.jpg" class="img-fluid" alt="...">
+                        </a>
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+    
+                        <a href=""  >
+                            <img src="assets/img/16-07-14_Moreno-CBP_11_LOW.jpg" class="img-fluid" alt="...">
+                        </a>
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+    
+                        <a href=""  >
+                            <img src="assets/img/15166_151029_RK_ext_0001_low.jpg" class="img-fluid" alt="...">
+                        </a>
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+    
+                        <a href=""  >
+                            <img src="assets/img/16204B_170406_cy_D0084.jpg" class="img-fluid" alt="...">
+                        </a>
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+                        <a href=""  >
+                            <img src="assets/img/house17_7383_low.jpg" class="img-fluid" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+                        <a href=""  >
+                            <img src="assets/img/eco_06_low.jpg" class="img-fluid" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+                        <a href=""  >
+                            <img src="assets/img/metz.jpg" class="img-fluid" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 section_gallery__grid__item">
+                            <a href=""  >
+                                <img src="assets/img/_C1_6868_low.jpg" class="img-fluid" alt="...">
+                            </a>
+                        </div>
+                        
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </section>
+{% endblock %}

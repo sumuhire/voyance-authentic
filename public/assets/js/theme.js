@@ -32,7 +32,7 @@ var Navbar = (function() {
 		if ( scrollTop > 5 ) {
 			makeNavbarDark();
 		} else {
-			makeNavbarLight();
+			makeNavbarDark();
 		}
 	}
 

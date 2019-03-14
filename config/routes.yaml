@@ -10,13 +10,21 @@ index:
   path:     /
   controller: App\Controller\DefaultController::index
 
-dashboard:
-  path:     /dashboard
-  controller: App\Controller\DefaultController::dashboard
+projects:
+  path:     /projects
+  controller: App\Controller\DefaultController::projectsMenu
 
-editare:
-  path:     /dashboard{id}
-  controller: App\Controller\DefaultController::editare
+project:
+  path:     /projects1
+  controller: App\Controller\DefaultController::project
+
+press:
+  path:     /press
+  controller: App\Controller\DefaultController::pressMenu
+
+about:
+  path:     /about
+  controller: App\Controller\DefaultController::about
 
 logout:
   path: /logout
