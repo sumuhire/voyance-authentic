@@ -1,94 +1,179 @@
+
+
 {# NAVBAR
-    ================================================= #}
-    <nav class="navbar navbar-expand-xl navbar-dark navbar-togglable fixed-top" >
+================================================= #}
+<nav class="navbar navbar-expand-xl navbar-light fixed-top bg-white ">
+	<div class="navbar fixed-top" style='background-color:#305926;height:20px'>
 			<div class="container">
-	  
-			  {# Brand #}
-			  <a class="navbar-brand" href="{{path('index')}}">
+				<div class='row justify-content-center' style='margin:auto' >
+					
+					<p class='text-center text-white' style='margin-bottom:0'>Réalisez vos commandes en ligne!</p>
+				</div>
+			</div>
+		</div>
+	<div class="container bg-white" style="padding-top:1rem">
+		
+		
+		{# Navbar: Brand #}
+		<a class="navbar-brand d-lg-none" id='logo' href="{{path('index')}}" style='padding-top: 1.2rem;padding-bottom: 1.2rem;'>
+			<img alt="comptoir" src="assets/img/comptoir.png"  />
+		</a>
+
+		{# Toggler #}
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		{# Collapse #}
+		<div class="collapse navbar-collapse pl-3" id="navbarCollapse" >
+
+		{# Navbar navigation: Left #}
+		{# Search form #}
+		<div class="md-form mt-0" style='margin-right:2rem'>
+			<input class="form-control" type="text" placeholder="Recherche" aria-label="Recherche" style='width: 400px;border: none;border: 1px solid #305926;background: transparent;border-radius:2rem!important;padding-top:.1rem!important;padding-bottom:.1rem!important;height:40px;box-shadow: 0 1px 4px 0 #305926;'>
+		</div>
+		
+
+			{# Navbar: Brand #}
+			<a class="navbar-brand d-none d-lg-flex" href="{{path('index')}}">
+					<img alt="comptoir" src="assets/img/comptoir.png"  />
+			</a>
+
+			{# Navbar navigation: Right #}
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<div class="dropdown">  
+						<a class="nav-link" href="" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">A propos <i class="fas fa-angle-down" style='font-size:1em;'></i></a>
+						<div class="dropdown-menu dropdown-menu-right" >
+								<a href="#new" class="dropdown-item" style="font-weight:400">Nouveautés</a>
+								<a href="#promo" class="dropdown-item" style="font-weight:400">Promotions</a>
+								<a href="{{path('dossiers')}}" class="dropdown-item" style="font-weight:400">Dossiers</a>
+								<a href="{{path('about')}}" class="dropdown-item" style="font-weight:400">Qui sommes-nous?</a>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact</a>
+				</li>
+				<li class="nav-item-divider" >
+						<span class="nav-link" >
+							<span></span>
+						</span>
+						</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#modal-connexion" data-toggle="modal" ><i class="far fa-user-circle" style='font-size:1.1rem'></i> Connexion</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{path('panier')}}"><i class="fas fa-shopping-cart" style='font-size:1.1rem'></i> Panier</a>
+				</li>
+			</ul>
+
+
+		</div> {# / .navbar-collapse #}
+			
+				 {# NAV
+    ================================================== #}
+		<div class="mt-navbar border-bottom fixed-top" style='background-color:#fafafa;z-index: -1!important;'>
+			<div class="container">
+				<div class="row justify-content-left">
+					<div class="col-12 col-md-auto">
+						
+						<nav class="nav nav-overflow py-2" style='overflow-x:visible'>
+							<div class="dropright">      
+								<a class="nav-link font-weight-normal text-xs" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Micronutrition 
+								</a>
+												{# Update links #}
+								<div class="dropdown-menu dropdown-menu-right" >
+										<a href="" class="dropdown-item" style="font-weight:400">Concours</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Privé</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Résidentiel</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Administratif</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Horeca</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Intérieur</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Urbanisme</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Culture</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Retail</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Extérieur</a>
+										<a href="" class="dropdown-item" style="font-weight:400">Equipment</a>	
+								</div>
+							</div>
+							<a class="nav-link font-weight-normal text-xs" href="#!">
+								Protéines 
+							</a>
+							<a class="nav-link font-weight-normal text-xs" href="#!">
+								Huiles 
+							</a>
+							<a class="nav-link font-weight-normal text-xs" href="#!">
+								Alimentation 
+							</a>
+							<a class="nav-link font-weight-normal text-xs" href="#!">
+								Divers 
+							</a>
+						</nav>
+
+					</div>
+				</div> {# / .row #}
+			</div> {# / .container #}
+		</div>   
+
+	</div> {# / .container #}
+</nav>
+	{# Modal connexion #}
+	<div class="modal fade" id="modal-connexion" tabindex="-1" role="dialog" aria-labelledby="modal-connexion-header" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-video modal-lg" role="document">
+			<div class="modal-content" style='border-radius:0.625rem!important;background-color:#fafafa;box-shadow: 0 1px 4px 2px rgb(153, 122, 99);'  >
+		
+			{# Header #}
+			<div class="modal-header" style='background-color:transparent'>
+
+				{# Close #}
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" style='color:#ffc107'>
+				<span aria-hidden="true">&times;</span>
+				</button>
+		
+			</div>
+			<div class="modal-body text-center">
+
+					<div class="main-container mt-4 mb-6">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-xl-8 col-lg-8 col-md-8">
+										<div class="text-center">
+											<h1 class="h2">Bienvenue &#x1f44b;</h1>
+											<p class="lead">Connecter vous pour continuer</p>
+											<form>
+												<div class="form-group" >
+													<input class="form-control" type="email" placeholder="Email Address" name="login-email" style='border-radius:.625rem!important' />
+												</div>
+												<div class="form-group">
+													<input class="form-control" type="password" placeholder="Password" name="login-password" style='border-radius:.625rem!important' />
+													<div class="text-right">
+														<small><a href="#">Mot de passe oublié?</a>
+														</small>
+													</div>
+												</div>
+												<button class="btn btn-lg btn-block btn-primary" role="button" type="submit" style='border-radius:.625rem!important'>
+													Connexion
+												</button>
+												<small><span>Pas encore de compte?</span><a href="{{path('inscription')}}"> Créer un compte</a>
+												</small>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 				
-					<img alt="moreno" id="logo" src="assets/img/LOGO COMPLET MORENO 8019.png" style='width:166px;height:26px' />
-				 
-			  </a>
-			  
+				
 		
-			  {# Toggler #}
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
-				<span class="navbar-toggler-icon"></span>
-			  </button>
+			</div>
+			</div> {# / .modal-content #}
+		</div> {# / .modal-dialog #}
+	</div> {# / .modal #}
+
 		
-			  {# Collapse #}
-			  <div class="collapse navbar-collapse" id="navbarCollapse">
-			  
-	  
-				{# Social #}
-				<ul class="navbar-nav mr-auto">
-				  <li class="nav-item-divider" >
-					<span class="nav-link" >
-					  <span></span>
-					</span>
-				  </li>
-				  <li class="nav-item">
-					<a href="#" class="nav-link">
-					  <i class="fab fa-facebook"></i> 
-					  <span class="d-xl-none ml-2">
-						Facebook
-					  </span>
-					</a>
-				  </li>
-				  <li class="nav-item">
-					<a href="#" class="nav-link">
-					  <i class="fab fa-twitter"></i> 
-					  <span class="d-xl-none ml-2">
-						Twitter
-					  </span>
-					</a>
-				  </li>
-				  <li class="nav-item">
-					<a href="#" class="nav-link">
-					  <i class="fab fa-instagram"></i> 
-					  <span class="d-xl-none ml-2">
-						Instagram
-					  </span>
-					</a>
-				  </li>
-				</ul>
-	  
-				{# Links #}
-				<ul class="navbar-nav ml-auto" style='letter-spacing: 0.1em;'>
-				 
-				  <li class="nav-item">
-					<a href="{{path('projects')}}" class="nav-link" id='getStarted' >
-						Projects
-					</a>
-				  </li>
-				  <li class="nav-item">
-					<a href="{{path('press')}}" class="nav-link"id='getStarted' >
-						Press
-					</a>
-				  </li>
-				  <li class="nav-item">
-					<a href="{{path('about')}}" class="nav-link" id='getStarted' >
-						About
-					</a>
-				  </li>
-				  <li class="nav-item">
-					<a href="#book-a-demo" class="nav-link" id='getStarted' >
-						Jobs
-					</a>
-				  </li>
-				  <li class="nav-item">
-					<a href="#book-a-demo" class="nav-link"id='getStarted' >
-						Contact
-					</a>
-				  </li>
-				  
-	  
-				  
-				</ul>
-	  
-			  </div> {# / .navbar-collapse #}
-		
-			</div> {# / .container #}    
-		  </nav>
+	 
+
 	
 	

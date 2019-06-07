@@ -18,7 +18,6 @@ security:
             form_login:
                 check_path: login
                 login_path: login
-                success_handler: redirect.after.login     
                 # default_target_path: /education 
             logout:
                 path:   /logout

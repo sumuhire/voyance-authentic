@@ -2,36 +2,35 @@
 <html lang="en">
 
     <head>
+        
+        <title>Le comptoir de la santé</title>
+        
+        {# meta #}
         <meta charset="utf-8">
-
-        <title>Moreno Architecture</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <meta name="description" content="Moreno Architecture">
+        <meta name="description" content="Le comptoir de la santé">
+        <meta name="msapplication-config" content="{{ asset('assets/ico/browserconfig.xml')}}">
+        <meta name="theme-color" content="#ffffff">
 
         {% block stylesheets %}
 
+        {# CDN - Font, Icons, .. #}
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/ico/apple-touch-icon.png')}}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/ico/favicon-32x32.png')}}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/ico/favicon-16x16.png')}}">
+
+        {# Favicon #}
         <link rel="manifest" href="{{ asset('assets/ico/manifest.json')}}">
-        <link rel="mask-icon" href="{{ asset('assets/ico/safari-pinned-tab.svg')}}" color="#5bbad5">
-        <link rel="shortcut icon" href="{{ asset('assets/ico/favicon.ico')}}">
-        <meta name="msapplication-config" content="{{ asset('assets/ico/browserconfig.xml')}}">
-        <meta name="theme-color" content="#ffffff">
-        <!-- CSS Plugins -->
+        <link rel="shortcut icon" href="{{ asset('assets/ico/comptoir-logo.png')}}">
+
+        {# CSS Plugins #}
         <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/lightbox/css/lightbox.min.css')}}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/flickity/flickity.min.css')}}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/carousel/css/owl.carousel.css')}}">
         
 
-        <!-- CSS Global -->
-        <!-- build:css assets/css/theme.min.css -->
+        {# CSS Global #}
         <link href="{{ asset('assets/css/theme.min.css') }}" rel="stylesheet" type="text/css" media="all" />
-        <!-- endbuild -->
         
         {% endblock %}
     
@@ -57,14 +56,14 @@
         
         {% block javascripts %}
 
-
+        {# Google API - maps #}
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC909s23g2XEIj1DCk5bWKvrice8hkbxNM&callback=initMap" type="text/javascript"></script>
 
-        <!-- JS Global -->
+        {# JS Global #}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-        <!-- JS Plugins -->
+        {# JS Plugins #}
         <script src="{{ asset('assets/plugins/parallax/parallax.min.js')}}"></script>
         <script src="{{ asset('assets/plugins/isotope/lib/imagesloaded.pkgd.min.js')}}"></script>
         <script src="{{ asset('assets/plugins/isotope/isotope.pkgd.min.js')}}"></script>
@@ -72,11 +71,13 @@
         <script src="{{ asset('assets/plugins/lightbox/js/lightbox.min.js')}}"></script>
         <script src="{{ asset('assets/plugins/reservation/reservation.js')}}"></script>
         <script src="{{ asset('assets/plugins/alerts/alerts.js')}}"></script>
+        <script src="{{ asset('assets/plugins/slider/slider.js')}}"></script>
         <script src="{{ asset('assets/plugins/carousel/js/owl.carousel.js')}}"></script>
-        <!-- JS Custom -->
-        <!-- build:js assets/js/theme.min.js -->
+        
+        {# JS global #}
         <script src="{{ asset('assets/js/theme.js')}}"></script>
-        <!-- endbuild -->
+
+        {# JS Custom #}
         <script src="{{ asset('assets/js/custom.js')}}"></script>
 
         {% endblock %}

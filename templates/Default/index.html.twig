@@ -1,141 +1,604 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Moreno Architecture{% endblock %}
+{% block title %}Le comptoir de la santé {% endblock %}
 
 
 {% block body %}
-
-	<!-- INFO
-	================================================== -->
-	<section class="section section_info section_no-padding_top section_no-padding_bottom img-fluid" >
-			<div >
-				<div class="row align-items-justify">
-						
-					<div class="col-md-8 section_gallery__grid__item" style='margin-top:30px' >						
-						<a href="{{path('project')}}" >
-							<img src="assets/img/14081_II_141016_1007_NW_0000.jpg" class='img-fluid' alt="..." >
-						</a>
-					</div>
-						
-					
-					<div class="col-md-1"></div>
-					<div class="col-md-2 section_gallery__grid__item" style='margin-top:70px' >
-						<a href="" >
-							<img src="assets/img/one.jpg" class='img-fluid' alt="...">
-						</a>
-						<div class="section_info__body">
-							<a href="{{path('projects')}}">
-								<h1 class="section__preheading text-primary">
-									Concours<span class="d-inline-block h5" style='color:#E2DCCB'>&xrarr;</span>
-								</h1>
-							</a>
-							<p class="section__subheading" style='margin-bottom:0px'>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
-								</p>
-						</div>					
-					</div>
-					<div class="col-md-1"></div>
-				</div> <!-- / .row -->
-			</div> <!-- / .container -->
-		</section>
 	
 
-	<!-- HERO
-    ================================================== -->
-    <section class="section section-top section-full " data-parallax="scroll"  style='background-image:url(assets/img/scandinavie.jpg);min-height:450px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;'>
-
-		<!-- Overlay -->
-		<div class="bg-overlay"></div>
-
-		<!-- Content -->
-		<div class="container">
-		  <div class="row justify-content-center align-items-center">
-			<div class="col-md-8 col-lg-7">
-  
+{# HERO
+    ================================================== #}
+    <section class="overflow-hidden mt-9" >
+				<div class="container">
+						
+					<div class="row">
+							<div class="col-12 col-md-6 col-xl-5 order-md-1 section pb-md-0 pb-xl-5">
+							
+									{# Preheading #}
+									<p class="font-weight-medium text-xs text-uppercase text-primary" >
+										Par le comptoir de la santé
+									</p>
 			
-  
-  
-			</div>
-		  </div> <!-- / .row -->
-		</div> <!-- / .container -->
-  
-		</section>
-	</br>
-	  <!-- INFO
-	================================================== -->
-	<section class="section section_info section_info_opposite section_no-padding_top section_no-padding_bottom">
-			<div >
-				<div class="row align-items-justify">
-						<div class="col-md-1 order-md-1"></div>
-					<div class="col-md-6 order-md-3 section_gallery__grid__item">
-						
-						
-							<a href="" >
-								<img src="assets/img/DSC_5327.jpg" class='img-fluid' alt="...">
-							</a>
-						</br>
+									{# Heading #}
+									<h1 class="mb-4" >
+											Tout comme l'esprit, le corps ne doit pas être laissé à l’abandon.
+									</h1>
+			
+									{# Subheading #}
+									<p class="mb-5 text-muted" >
+											 Au comptoir de la santé, nous ne cherchons pas à remplacer votre alimentation courante mais à la compléter. Autrement dit lui apporter les vitamines, minéraux et autres principes actifs nécessaires.
+									</p>
+									
+									{# Button #}
+									<a href="#!" class="btn btn-outline-primary" style='border-radius: 3.125rem !important;'>
+											Nos compléments <i class="fas fa-arrow-right ml-2"></i>
+										</a>
+				
+								
+								</div>
+						<div class="col-12 col-md-6 offset-xl-1 order-md-2 section pt-0 pb-xl-0">
+	
 						
 							
-						<a href="" >
-								<img src="assets/img/PLAN_MASSE_OCOBRE_2014_low.jpg" class='img-fluid' alt="...">
-							</a>
-						
+							{# Image #}
+							<div class="img-half">
+								<img src="assets/img/comptoir1.jpeg" alt="..." class="img-cover img-incline-left">
+							</div>
 	
-					</div>
-					<div class="col-md-1 order-md-2"></div>
-					<div class="col-md-4 order-md-1 section_gallery__grid__item" >
-	
-							<div class="section_info__body" style='padding:4rem!important'>
-									<h3 class="section__preheading text-primary">
-										Privé<span class="d-inline-block h5" style='color:#E2DCCB'>&xrarr;</span>
-									</h3>
-									<p class="section__subheading" style='margin-bottom:0px'>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
-										</p>
-								</div>
-								<a href="" >
-										<img src="assets/img/DSC_5300.jpg" class='img-fluid' alt="...">
-									</a>
-						
-					</div>
-					
-				</div> <!-- / .row -->
-			</div> <!-- / .container -->
-		</section>
-
-	<!-- INFO
-	================================================== -->
-	<section class="section section_info section_no-padding_top section_no-padding_bottom">
-		<div class="container">
-			<div class="row align-items-justify">
-				<div class="col-md-6 section_gallery__grid__item">
-					
-					
-							<a href="" >
-									<img src="assets/img/eco_06_low.jpg" class='img-fluid' alt="...">
-								</a>
-				
-
-				</div>
-				<div class="col-md-1"></div>
-				<div class="col-md-5">
-
-						<div class="section_info__body">
-							<h3 class="section__preheading text-primary">
-								Urbanism<span class="d-inline-block h5" style='color:#E2DCCB'>&xrarr;</span>
-							</h3>
-							<p class="section__subheading" style='margin-bottom:0px'>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
-								</p>
 						</div>
+						
+					</div> {# / .row #}
+				</div> {# / .container #}
+			</section>
+			{# FEATURED
+			================================================== #}
+			<section class="section pt-5" id='promo'>
+			
+					{# Content #}
+					<div class="container">
+							<div class="row justify-content-center">
+									<div class="col-md-5 col-lg-5" >
+										<div class="text-center mb-4">
+												<img src="assets/img/comptoir-logo.png" alt="..." class="card-img " style='width:10%;margin:auto'>
+										</div>
+										
+										{# Heading #}
+										<h2 class="text-center mb-4" style='color:#305926'>
+												Nos promotions
+											</h2>
+											<p class="text-muted text-center mb-5" >
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quod earum expedita molestias.
+											</p>
 					
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</section>
-
-
+									</div>
+							</div> {# / .row #}
+						<div class="row align-items-top">
+								
+							<div class="col-12 col-md-8">
+								
+								{# Slider #}
+								<div class="slider">
+									<div class="slider-item col-12 col-md-10 col-lg-6">
+										
+										{# Item #}
+										<div class="position-relative">
+		
+											{# Card #}
+											<a class="card border-0" href="shop-item.html">
+												
+												{# Image #}
+												<img src="assets/img/IMG_0589.jpg" alt="..." class="card-img" style='height:242px'>
+												
+												{# Body #}
+												<div class="card-body">
+		
+													<div class="row align-items-center mb-3">
+														<div class="col">
+		
+															{# Heading #}
+															<h4 class="card-title mb-0">
+															Granamed
+															</h4>
+															
+														</div>
+														<div class="col-auto">
+															
+															<p class="mb-0 text-sm text-muted">
+																	€ 42,00
+															</p>
+		
+														</div>
+													</div> {# / .row #}
+		
+													{# Text #}
+													<p class="mb-0 text-sm text-muted">
+															L'acide alpha lipoïque forme R augmente ou maintient les niveaux des autres antioxydants notamment les vitamines C, E, le coenzyme Q10 et le glutathion.
+													</p>
+													
+												</div>
+		
+											</a>
+		
+											{# Button #}
+											<button class="btn btn-sm btn-circle btn-primary card-add">
+												<i class="fas fa-plus"></i>
+											</button>
+		
+										</div>
+										
+									</div>
+									
+									<div class="slider-item col-12 col-md-10 col-lg-6">
+		
+										{# Item #}
+										<div class="position-relative">
+		
+											{# Card #}
+											<a class="card border-0" href="shop-item.html">
+												
+												{# Image #}
+												<img src="assets/img/comptoir1.jpeg" alt="..." class="card-img">
+												
+												{# Body #}
+												<div class="card-body">
+		
+													<div class="row align-items-center mb-3">
+														<div class="col">
+		
+															{# Heading #}
+															<h4 class="card-title mb-0">
+																	Acide alpha lipoïque forme R
+															</h4>
+															
+														</div>
+														<div class="col-auto">
+															
+															<p class="mb-0 text-sm text-muted">
+																	€ 15,13
+															</p>
+		
+														</div>
+													</div> {# / .row #}
+		
+													{# Text #}
+													<p class="mb-0 text-sm text-muted">
+															L'acide alpha lipoïque forme R augmente ou maintient les niveaux des autres antioxydants notamment les vitamines C, E, le coenzyme Q10 et le glutathion.
+													</p>
+													
+												</div>
+		
+											</a>
+		
+											{# Button #}
+											<button class="btn btn-sm btn-circle btn-primary card-add">
+												<i class="fas fa-plus"></i>
+											</button>
+		
+										</div>
+										
+									</div>
+									<div class="slider-item col-12 col-md-10 col-lg-6">
+		
+										{# Item #}
+										<div class="position-relative">
+		
+											{# Card #}
+											<a class="card border-0" href="shop-item.html">
+												
+												{# Image #}
+												<img src="assets/img/comptoir2.jpeg" alt="..." class="card-img">
+												
+												{# Body #}
+												<div class="card-body">
+		
+													<div class="row align-items-center mb-3">
+														<div class="col">
+		
+															{# Heading #}
+															<h4 class="card-title mb-0">
+																	Glycemaxo
+															</h4>
+															
+														</div>
+														<div class="col-auto">
+															
+															<p class="mb-0 text-sm text-muted">
+																	€ 20,60 
+															</p>
+		
+														</div>
+													</div> {# / .row #}
+		
+													{# Text #}
+													<p class="mb-0 text-sm text-muted">
+															Glycemaxo est un complément alimentaire micronutritionnel pour réguler la glycémie et l'hémoglobine glycosylée.
+													</p>
+													
+												</div>
+		
+											</a>
+		
+											{# Button #}
+											<button class="btn btn-sm btn-circle btn-primary card-add">
+												<i class="fas fa-plus"></i>
+											</button>
+		
+										</div>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="col-12 col-md-4">
+										
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quod earum expedita molestias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quod earum expedita molestias.
+									</p>
+									{# Button #}
+									<a href="#!" class="btn btn-outline-primary mb-5 mb-md-0" style='border-radius: 3.125rem !important;'>
+										Toutes les promotions <i class="fas fa-arrow-right ml-2"></i>
+									</a>
+			
+								</div>
+						</div> {# / .row #}
+					</div> {# / .container #}
+		
+				</section>
 	
+			{# ITEMS
+			================================================== #}
+			<section class="section pt-5" id='new' style='background-color:#fafafa'>
+					<div class="container">
+						<div class="row justify-content-center">
+								<div class="col-md-5 col-lg-5" >
+									<div class="text-center mb-4">
+											<img src="assets/img/comptoir-logo.png" alt="..." class="card-img " style='width:10%;margin:auto'>
+									</div>
+									
+									{# Heading #}
+									<h1 class="text-center mb-4" style='color:#305926'>
+										Nouveautés
+									</h1>
+			
+									{# Subheading #}
+									<p class="text-muted text-center mb-5" >
+											Nos éventail de produit s'agrandit de jour en jour, nous vous invitons à revenir consulter nos nouveautés.
+									</p>
+			
+								</div>
+						</div> {# / .row #}
+						<div class="row">
+							<div class="col-12 col-md-6 col-lg-4">
+								
+								{# Item #}
+								<div class="position-relative">
+		
+									{# Card #}
+									<a class="card border-0 mb-3" href="{{path('produit')}}">
+										
+										{# Image #}
+										<img src="assets/img/comptoir1.jpeg" alt="..." class="card-img">
+										
+										{# Body #}
+										<div class="card-body">
+		
+											<div class="row align-items-center mb-3">
+												<div class="col">
+		
+													{# Heading #}
+													<h4 class="card-title mb-0">
+															Glycemaxo
+													</h4>
+													
+												</div>
+												<div class="col-auto">
+													
+													<p class="mb-0 text-sm text-muted">
+															€ 20,60 
+													</p>
+		
+												</div>
+											</div> {# / .row #}
+		
+											{# Text #}
+											<p class="mb-0 text-sm text-muted">
+													Glycemaxo est un complément alimentaire micronutritionnel pour réguler la glycémie et l'hémoglobine glycosylée.
+											</p>
+											
+										</div>
+		
+									</a>
+		
+									{# Button #}
+									<button class="btn btn-sm btn-circle btn-primary card-add" data-toggle="cart" data-action="add">
+										<i class="fas fa-plus"></i>
+									</button>
+		
+								</div>
+		
+							</div>
+							<div class="col-12 col-md-6 col-lg-4">
+								
+								{# Item #}
+								<div class="position-relative">
+		
+									{# Card #}
+									<a class="card border-0 mb-3" href="{{path('produit')}}">
+										
+										{# Image #}
+										<img src="assets/img/comptoir1.jpeg" alt="..." class="card-img">
+										
+										{# Body #}
+										<div class="card-body">
+		
+											<div class="row align-items-center mb-3">
+												<div class="col">
+		
+													{# Heading #}
+													<h4 class="card-title mb-0">
+															Acide alpha lipoïque forme R
+													</h4>
+													
+												</div>
+												<div class="col-auto">
+													
+													<p class="mb-0 text-sm text-muted">
+															€ 15,13
+													</p>
+		
+												</div>
+											</div> {# / .row #}
+		
+											{# Text #}
+											<p class="mb-0 text-sm text-muted">
+													L'acide alpha lipoïque forme R augmente ou maintient les niveaux des autres antioxydants notamment les vitamines C, E, le coenzyme Q10 et le glutathion.
+											</p>
+											
+										</div>
+		
+									</a>
+		
+									{# Button #}
+									<button class="btn btn-sm btn-circle btn-primary card-add" data-toggle="cart" data-action="add">
+										<i class="fas fa-plus"></i>
+									</button>
+		
+								</div>
+		
+							</div>
+							<div class="col-12 col-md-6 col-lg-4">
+								
+								{# Item #}
+								<div class="position-relative">
+		
+									{# Card #}
+									<a class="card border-0 mb-3" href="shop-item.html">
+										
+										{# Image #}
+										<img src="assets/img/comptoir1.jpeg" alt="..." class="card-img">
+										
+										{# Body #}
+										<div class="card-body">
+		
+											<div class="row align-items-center mb-3">
+												<div class="col">
+		
+													{# Heading #}
+													<h4 class="card-title mb-0">
+															Creme dessert vanille
+													</h4>
+													
+												</div>
+												<div class="col-auto">
+													
+													<p class="mb-0 text-sm text-muted">
+															€ 5,80 
+													</p>
+		
+												</div>
+											</div> {# / .row #}
+		
+											{# Text #}
+											<p class="mb-0 text-sm text-muted">
+													En-cas hyperprotidique et hypocalorique appauvri en lipides et glucides dont la valeur énergétique est de 100kcal par unité, avec édulcorants.
+											</p>
+											
+										</div>
+		
+									</a>
+		
+									{# Button #}
+									<button class="btn btn-sm btn-circle btn-primary card-add" data-toggle="cart" data-action="add">
+										<i class="fas fa-plus"></i>
+									</button>
+		
+								</div>
+		
+							</div>
+							<div class="col-12 col-md-6 col-lg-4">
+								
+								{# Item #}
+								<div class="position-relative">
+		
+									{# Card #}
+									<a class="card border-0 mb-3" href="shop-item.html">
+										
+										{# Image #}
+										<img src="assets/img/comptoir1.jpeg" alt="..." class="card-img">
+										
+										{# Body #}
+										<div class="card-body">
+		
+											<div class="row align-items-center mb-3">
+												<div class="col">
+		
+													{# Heading #}
+													<h4 class="card-title mb-0">
+															Saucisson
+													</h4>
+													
+												</div>
+												<div class="col-auto">
+													
+													<p class="mb-0 text-sm text-muted">
+															€ 2,15 
+													</p>
+		
+												</div>
+											</div> {# / .row #}
+		
+											{# Text #}
+											<p class="mb-0 text-sm text-muted">
+													Spécialité de saucisson de jambon, enrichi en protéines, réduit en matières grasses.
+											</p>
+											
+										</div>
+		
+									</a>
+		
+									{# Button #}
+									<button class="btn btn-sm btn-circle btn-primary card-add" data-toggle="cart" data-action="add">
+										<i class="fas fa-plus"></i>
+									</button>
+		
+								</div>
+		
+							</div>
+							<div class="col-12 col-md-6 col-lg-4">
+								
+								{# Item #}
+								<div class="position-relative">
+		
+									{# Card #}
+									<a class="card border-0 mb-3" href="shop-item.html">
+										
+										{# Image #}
+										<img src="assets/img/comptoir1.jpeg" alt="..." class="card-img">
+										
+										{# Body #}
+										<div class="card-body">
+		
+											<div class="row align-items-center mb-3">
+												<div class="col">
+		
+													{# Heading #}
+													<h4 class="card-title mb-0">
+															Axobrik framboise
+													</h4>
+													
+												</div>
+												<div class="col-auto">
+													
+													<p class="mb-0 text-sm text-muted">
+															€ 1,95 
+													</p>
+		
+												</div>
+											</div> {# / .row #}
+		
+											{# Text #}
+											<p class="mb-0 text-sm text-muted">
+													Boisson UHT façon smoothie saveur framboise. Préparation diététique hyperprotidique, en-cas hypocalorique appauvri en glucides et en lipides dont la valeur énergétique est de 93kcal. Avec édulcorants, faible teneur en sucres.
+											</p>
+											
+										</div>
+		
+									</a>
+		
+									{# Button #}
+									<button class="btn btn-sm btn-circle btn-primary card-add" data-toggle="cart" data-action="add">
+										<i class="fas fa-plus"></i>
+									</button>
+		
+								</div>
+		
+							</div>
+							<div class="col-12 col-md-6 col-lg-4">
+								
+								{# Item #}
+								<div class="position-relative">
+		
+									{# Card #}
+									<a class="card border-0 mb-3" href="shop-item.html">
+										
+										{# Image #}
+										<img src="assets/img/comptoir1.jpeg" alt="..." class="card-img">
+										
+										{# Body #}
+										<div class="card-body">
+		
+											<div class="row align-items-center mb-3">
+												<div class="col">
+		
+													{# Heading #}
+													<h4 class="card-title mb-0">
+															Barre fondante caramel/cacahuète
+													</h4>
+													
+												</div>
+												<div class="col-auto">
+													
+													<p class="mb-0 text-sm text-muted">
+															€ 5,40 
+													</p>
+		
+												</div>
+											</div> {# / .row #}
+		
+											{# Text #}
+											<p class="mb-0 text-sm text-muted">
+													Barre saveur chocolat caramel cacahuète riche en protéines et fibres, avec sucre et édulcorants.
+											</p>
+											
+										</div>
+		
+									</a>
+		
+									{# Button #}
+									<button class="btn btn-sm btn-circle btn-primary card-add" data-toggle="cart" data-action="add">
+										<i class="fas fa-plus"></i>
+									</button>
+		
+								</div>
+		
+							</div>
+						</div> {# / .row #}
+					</div> {# / .container #}
+				</section>
+{# MAP
+    ================================================== #}
+    <section class="section">
+
+			{# Content #}
+			<div class="container">
+			  <div class="row justify-content-center">
+				<div class="col-md-8 col-lg-6">
+	  
+				  {# Heading #}
+				  <h2 class="text-center mb-4">
+					Trouvez-nous sur la carte!
+				  </h2>
+	  
+				 
+				</div>
+			  </div> {# / .row #}
+			  <div class="row">
+				<div class="col-12">
+	  
+				  {# Map #}
+				  <div class="map">
+					<div class="map-container" data-markers="[[34.0872254,-118.4046315]]" data-zoom="8"></div>
+				  </div>
+				  
+				</div>
+			  </div> {# / .row #}
+			</div> {# / .container #}
+	  
+		  </section>
+
+
+
+
 
 	
 

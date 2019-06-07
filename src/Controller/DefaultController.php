@@ -12,14 +12,6 @@ class DefaultController extends Controller{
         );
     }
 
-
-    public function projectsMenu(){
-
-        return $this->render(
-            'Projects/projectsMenu.html.twig'
-        );
-    }
-
     public function pressMenu(){
 
         return $this->render(
@@ -35,12 +27,48 @@ class DefaultController extends Controller{
     }
 
 
-    public function project(){
+    public function produit(){
 
         return $this->render(
-            'Projects/project.html.twig'
+            'Produits/produit.html.twig'
         );
     }
+
+    public function dossier(){
+
+        return $this->render(
+            'Dossier/dossier.html.twig'
+        );
+    }
+
+    public function dossiers(){
+
+        return $this->render(
+            'Dossier/dossiers.html.twig'
+        );
+    }
+
+    public function panier(){
+
+        return $this->render(
+            'Panier/panier.html.twig'
+        );
+    }
+
+    public function inscription(){
+
+        return $this->render(
+            'Default/inscription.html.twig'
+        );
+    }
+
+    public function commande(){
+
+        return $this->render(
+            'Panier/commande.html.twig'
+        );
+    }
+
 
 }
 ?>

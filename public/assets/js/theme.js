@@ -20,20 +20,20 @@ var Navbar = (function() {
 	// Methods
 	// =======
 
-	function makeNavbarDark() {
-		$navbar.removeClass('navbar-light').addClass('navbar-dark');
-	}
-	function makeNavbarLight() {
-		$navbar.removeClass('navbar-dark').addClass('navbar-light');
-	}
-	function toggleNavbarClass() {
-		var scrollTop = $window.scrollTop();
+	// function makeNavbarDark() {
+	// 	$navbar.removeClass('navbar-light').addClass('navbar-dark');
+	// }
+	// function makeNavbarLight() {
+	// 	$navbar.removeClass('navbar-dark').addClass('navbar-light');
+	// }
+	// function toggleNavbarClass() {
+	// 	var scrollTop = $window.scrollTop();
 
-		if ( scrollTop > 5 ) {
-			makeNavbarDark();
-		} else {
-			makeNavbarDark();
-		}
+	// 	if ( scrollTop > 5 ) {
+	// 		makeNavbarLight();
+	// 	} else {
+	// 		makeNavbarLight();
+	// 	}
 	}
 
 	// Events
