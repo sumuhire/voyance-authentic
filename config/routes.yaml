@@ -2,43 +2,12 @@
 
 # DefaultController Routes
 
-inscription:
-  path: /inscription
-  controller: App\Controller\DefaultController::inscription
-
 index:
   path:     /
   controller: App\Controller\DefaultController::index
 
-dossier:
-  path:     /dossier
-  controller: App\Controller\DefaultController::dossier
-
-dossiers:
-  path:     /dossiers
-  controller: App\Controller\DefaultController::dossiers
-
-produit:
-  path:     /produit
-  controller: App\Controller\DefaultController::produit
-
-press:
-  path:     /press
-  controller: App\Controller\DefaultController::pressMenu
-
-about:
-  path:     /about
-  controller: App\Controller\DefaultController::about
-
-panier:
-  path:     /panier
-  controller: App\Controller\DefaultController::panier
-
-commande:
-  path:     /commande
-  controller: App\Controller\DefaultController::commande
-
-logout:
-  path: /logout
+reviews:
+  path:     /reviews
+  controller: App\Controller\DefaultController::reviews
 
 

@@ -19,9 +19,9 @@ security:
                 check_path: login
                 login_path: login
                 # default_target_path: /education 
-            logout:
-                path:   /logout
-                target: login
+            # logout:
+            #     path:   /logout
+            #     target: login
 
     encoders:
         App\Entity\User: bcrypt
@@ -42,5 +42,7 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/dashboard, roles: ROLE_GIALLO }
+        # - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+ 
+
       

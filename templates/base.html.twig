@@ -3,82 +3,86 @@
 
     <head>
         
-        <title>Le comptoir de la santé</title>
+        <title>Festus Geraldo, votre Personal Trainer</title>
         
-        {# meta #}
+        {# Meta #}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <meta name="description" content="Le comptoir de la santé">
-        <meta name="msapplication-config" content="{{ asset('assets/ico/browserconfig.xml')}}">
+        <meta name="description" content="Festus Geraldo">
+        <meta name="msapplication-config" content="{{ asset('assets/img/favicons/mstile-150x150.png')}}">
         <meta name="theme-color" content="#ffffff">
 
         {% block stylesheets %}
 
-        {# CDN - Font, Icons, .. #}
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-        {# Favicon #}
-        <link rel="manifest" href="{{ asset('assets/ico/manifest.json')}}">
-        <link rel="shortcut icon" href="{{ asset('assets/ico/comptoir-logo.png')}}">
-
-        {# CSS Plugins #}
-        <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('assets/plugins/lightbox/css/lightbox.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('assets/plugins/flickity/flickity.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('assets/plugins/carousel/css/owl.carousel.css')}}">
+        {# Favicons #}
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicons/logo-festus6.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicons/logo-festus6.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicons/logo-festus6.png')}}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicons/logo-festus6.png')}}">
+        <link rel="manifest" href="{{ asset('assets/img/favicons/manifest.json')}}">
+        
+        {# lib #}
+        <link href="{{ asset('assets/lib/loaders.css/loaders.min.css')}}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
+        <link href="{{ asset('assets/lib/remodal/remodal.css')}}" rel="stylesheet">
+        <link href="{{ asset('assets/lib/remodal/remodal-default-theme.css')}}" rel="stylesheet">
+        <link href="{{ asset('assets/lib/owl.carousel/owl.carousel.css')}}" rel="stylesheet">
+        <link href="{{ asset('assets/lib/lightbox2/css/lightbox.css')}}" rel="stylesheet">
         
 
         {# CSS Global #}
-        <link href="{{ asset('assets/css/theme.min.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{{ asset('assets/css/theme.css') }}" rel="stylesheet" type="text/css" media="all" />
+
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+              {# <style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+              </style> #}
         
         {% endblock %}
     
     </head>
 
 
-    <body>
-        {% block header %}
-
-            {% include 'header.html.twig' %}
-           
-        {% endblock %}
+    <body class="has-sidemenu overflow-hidden-x">
         
         {% block body %}
+
         
         {% endblock %}
-
-        {% block footer %}
-
-            {% include 'footer.html.twig' %}
-            
-	    {% endblock %}
         
         {% block javascripts %}
 
-        {# Google API - maps #}
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC909s23g2XEIj1DCk5bWKvrice8hkbxNM&callback=initMap" type="text/javascript"></script>
-
-        {# JS Global #}
+        {# Jquery #}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+        {# JS Lib #}
+        <script src="{{ asset('assets/lib/loaders.css/loaders.css.js')}}"></script>
+        <script src="{{ asset('assets/lib/remodal/remodal.js')}}"></script>
+        <script src="{{ asset('assets/lib/owl.carousel/owl.carousel.js')}}"></script>
+        <script src="{{ asset('assets/lib/lightbox2/js/lightbox.js')}}"></script>
+        <script src="{{ asset('assets/lib/jquery.mb.ytplayer/jquery.mb.YTPlayer.min.js')}}"></script>
+        <script src="{{ asset('assets/lib/semantic-ui-accordion/accordion.min.js')}}"></script>
+        <script src="{{ asset('assets/lib/semantic-ui-transition/transition.min.js')}}"></script>
 
         {# JS Plugins #}
-        <script src="{{ asset('assets/plugins/parallax/parallax.min.js')}}"></script>
-        <script src="{{ asset('assets/plugins/isotope/lib/imagesloaded.pkgd.min.js')}}"></script>
-        <script src="{{ asset('assets/plugins/isotope/isotope.pkgd.min.js')}}"></script>
-        <script src="{{ asset('assets/plugins/flickity/flickity.pkgd.min.js')}}"></script>
-        <script src="{{ asset('assets/plugins/lightbox/js/lightbox.min.js')}}"></script>
-        <script src="{{ asset('assets/plugins/reservation/reservation.js')}}"></script>
-        <script src="{{ asset('assets/plugins/alerts/alerts.js')}}"></script>
-        <script src="{{ asset('assets/plugins/slider/slider.js')}}"></script>
-        <script src="{{ asset('assets/plugins/carousel/js/owl.carousel.js')}}"></script>
-        
+        <script src="{{ asset('assets/js/popper.min.js')}}"></script>
+        <script src="{{ asset('assets/js/bootstrap.js')}}"></script>
+        <script src="{{ asset('assets/js/stickyfill.min.js')}}"></script>
+        <script src="{{ asset('assets/js/rellax.min.js')}}"></script>
+        <script src="{{ asset('assets/js/progressbar.min.js')}}"></script>
+        <script src="{{ asset('assets/js/imagesloaded.pkgd.js')}}"></script>
+        <script src="{{ asset('assets/js/CustomEase.js')}}"></script>
+        <script src="{{ asset('assets/js/DrawSVGPlugin.js')}}"></script>
+        <script src="{{ asset('assets/js/fontawesome-all.js')}}"></script>
+        <script src="{{ asset('assets/js/ScrollToPlugin.js')}}"></script>
+        <script src="{{ asset('assets/js/TweenMax.js')}}"></script>
         {# JS global #}
         <script src="{{ asset('assets/js/theme.js')}}"></script>
 
-        {# JS Custom #}
-        <script src="{{ asset('assets/js/custom.js')}}"></script>
+        {# Google API - maps #}
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVvdkEIfY1ee1NStlx199-FhZELi5zRZM&callback=initMap" async defer></script>
 
         {% endblock %}
 

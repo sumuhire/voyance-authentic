@@ -1,0 +1,216 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Geraldo Festus{% endblock %}
+
+      {% block body %}
+    <!--===============================================-->
+    <!--    Fancynav-->
+    <!--===============================================-->
+    <nav class="fancynavbar" data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-48},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}'
+    data-zanim-trigger="scroll" data-exclusive="true" style='background-color:black!important'>
+    <div class="fancynavbar-togglerbar" data-onscroll-fade-in="data-onscroll-fade-in"  > 
+      <a class="fancynavbar-brand" href="{{path('index')}}">
+        <img class="fancynavbar-brand-img" src="assets/img/logo/logo-festus.png" alt="" width="30" height="30" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll"
+        />
+
+        <!--You can use icon or text logo as well-->
+        <!--<span class='fab fa-superpowers fs-3'></span>-->
+        <!--<span class='logo-sparrow'>S</span>--></a>
+      <div class="fancynavbar-toggler">
+        <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}' data-zanim-trigger="scroll">
+          <path id="path-top" d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"></path>
+          <path id="path-middle" d="M20,32h30"></path>
+          <path id="path-bottom" d="M19.9,46.98c0,0,18.8-18.85,29.95-29.95C68.89-1.92,66,38.78,50,38.78c-8,0-30,0-30,0"></path>
+        </svg>
+      </div>
+      <div class="fancynavbar-addon" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll">
+        {# <a class="fancynavbar-addon-item" href="#" data-remodal-target="language"><span class="text-sans-serif ls font-weight-black fs--1">EN</span></a> #}
+        <a class="fancynavbar-addon-item" target="_blank" href="https://www.facebook.com/2fast2festus/"><span class="fab fa-facebook"></span></a>
+        <a class="fancynavbar-addon-item" target="_blank" href="https://www.instagram.com/2fast2festus/"><span class="fab fa-instagram"></span></a>
+        <a class="fancynavbar-addon-item" target="_blank" href="https://twitter.com/festusgeraldo"><span class="fab fa-twitter"></span></a>
+      </div>
+    </div>
+    <div class="fancynavbar-collapse">
+      <ul class="fancynavbar-nav">
+     
+        <li class="fancynav-item">
+          <a class="fancynav-link" href="{{path('index')}}"><span class="fancynav-link-content">A propos</span></a>
+        </li>
+        <li class="fancynav-item">
+          <a class="fancynav-link" href="{{path('index')}}"><span class="fancynav-link-content">Vidéo</span></a>
+        </li>
+        <li class="fancynav-item">
+          <a class="fancynav-link" href="{{path('reviews')}}"><span class="fancynav-link-content">Témoignages</span></a>
+        </li>
+        <li class="fancynav-item">
+          <a class="fancynav-link" href="{{path('index')}}"><span class="fancynav-link-content">contact</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--===============================================-->
+  <!--    End of Fancynav-->
+  <!--===============================================-->
+
+
+
+  <!-- ===============================================-->
+  <!--    Main Content-->
+  <!-- ===============================================-->
+  <main class="main min-vh-100" id="top">
+
+
+    <!-- ============================================-->
+    <!-- Preloader ==================================-->
+    <div class="preloader" id="preloader">
+      <div class="loader">
+        <div class="line-scale-pulse-out-rapid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================-->
+    <!-- End of Preloader ===========================-->
+
+  <!-- ============================================-->
+  <!-- <section> begin ============================-->
+  <section class="pt-8 py-lg-7 py-xl-8 bg-light" id="ecommerce-header">
+    <div class="container-fluid">
+      <div class="row no-gutters align-items-center justify-content-center text-center text-sm-left">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3 align-self-center pr-sm-3 pb-3 pb-sm-0" style="max-width: 42.81rem">
+            <img src="assets/img/fest2.jpg" class="rounded-circle img-fluid"alt="" /> 
+        </div> 
+        <div class="col-sm px-4 " style="max-width: 42.81rem">
+            <h1 class="display-4 fs-1 fs-sm-2 fs-md-3 ">Ancien<span class="text-serif font-italic font-weight-normal px-2 px-md-3">sprinteur,</span>
+            <br class="d-none d-sm-block" />aujourd'hui votre Personal Trainer</h1>
+            <p class='lead' >Ses clients témoignent..</p>
+        </div>
+      </div>
+    </div>
+    <!-- end of .container-->
+
+  </section>
+  <!-- <section> close ============================-->
+  <!-- ============================================-->
+
+  <!-- ============================================-->
+  <!-- <section> begin ============================-->
+  <section class="py-0" id="ecommerce-products">
+
+    <div class="container-fluid px-4">
+      <div class="row mb-5">
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+          <div class="row no-gutters" >
+            <div class="col-12 overflow-hidden rounded" data-zanim-timeline='{"delay":0}' data-zanim-trigger="scroll">
+              <div class="hoverbox">
+                <div class="row">
+                  <div class="col">
+                    <img class="w-100" src="assets/img/ecommerce/1.jpg" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' />
+                  </div>
+                </div>
+                <div class="hoverbox-content hoverbox-background">
+                  <div class="hoverbox-bg d-flex align-items-center justify-content-center h-100">
+                    <img class="w-100" src="assets/img/ecommerce/2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 mt-2">
+              <h5 class="fs-0">Marie Doe</h5>
+              
+            </div>
+            <div class="col-6 mt-2 text-right" >
+              <h6 class="font-weight-normal mb-0 d-inline-block" style='color:#ffc107;'><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></h6>
+            </div>
+            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+        <div class="row no-gutters" >
+          <div class="col-12 overflow-hidden rounded" data-zanim-timeline='{"delay":0}' data-zanim-trigger="scroll">
+            <div class="hoverbox">
+              <div class="row">
+                <div class="col">
+                  <img class="w-100" src="assets/img/ecommerce/1.jpg" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' />
+                </div>
+              </div>
+              <div class="hoverbox-content hoverbox-background">
+                <div class="hoverbox-bg d-flex align-items-center justify-content-center h-100">
+                  <img class="w-100" src="assets/img/ecommerce/2.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-2">
+            <h5 class="fs-0">Marie Doe</h5>
+            
+          </div>
+          <div class="col-6 mt-2 text-right" >
+            <h6 class="font-weight-normal mb-0 d-inline-block" style='color:#ffc107;'><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></h6>
+          </div>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+        <div class="row no-gutters" >
+          <div class="col-12 overflow-hidden rounded" data-zanim-timeline='{"delay":0}' data-zanim-trigger="scroll">
+            <div class="hoverbox">
+              <div class="row">
+                <div class="col">
+                  <img class="w-100" src="assets/img/ecommerce/1.jpg" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' />
+                </div>
+              </div>
+              <div class="hoverbox-content hoverbox-background">
+                <div class="hoverbox-bg d-flex align-items-center justify-content-center h-100">
+                  <img class="w-100" src="assets/img/ecommerce/2.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-2">
+            <h5 class="fs-0">Marie Doe</h5>
+            
+          </div>
+          <div class="col-6 mt-2 text-right" >
+            <h6 class="font-weight-normal mb-0 d-inline-block" style='color:#ffc107;'><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></h6>
+          </div>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+      <div class="row no-gutters" >
+        <div class="col-12 overflow-hidden rounded" data-zanim-timeline='{"delay":0}' data-zanim-trigger="scroll">
+          <div class="hoverbox">
+            <div class="row">
+              <div class="col">
+                <img class="w-100" src="assets/img/ecommerce/1.jpg" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' />
+              </div>
+            </div>
+            <div class="hoverbox-content hoverbox-background">
+              <div class="hoverbox-bg d-flex align-items-center justify-content-center h-100">
+                <img class="w-100" src="assets/img/ecommerce/2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mt-2">
+          <h5 class="fs-0">Marie Doe</h5>
+        </div>
+        <div class="col-6 mt-2 text-right" >
+          <h6 class="font-weight-normal mb-0 d-inline-block" style='color:#ffc107;'><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></h6>
+        </div>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </div>
+  <!-- end of .container-->
+
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+{% endblock %}
